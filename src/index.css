@@ -13,6 +13,43 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+#background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#outer-wheel {
+  /* position: absolute; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  height: 90vh;
+  width: 90vh;
+  border-color: black;
+  border-style: solid;
+  border-width: 0.3vh;
+  flood-color: antiquewhite;
+}
+#inner-wheel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  height: 80vh;
+  width: 80vh;
+  border-color: black;
+  border-style: solid;
+  border-width: 0.3vh;
+}
+#ring-wheel {
+  border-radius: 50%;
+  height: 1vw;
+  width: 1vw;
+  border-color: burlywood;
+  border-style: solid;
+  border-width: 0.2vw;
+}
 
 a {
   font-weight: 500;

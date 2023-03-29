@@ -14,15 +14,15 @@
   -webkit-text-size-adjust: 100%;
 }
 #background {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 #outer-wheel {
-  /* position: absolute; */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-size: 1.5vh;
+  position: relative;
+  position: absolute;
   border-radius: 50%;
   height: 90vh;
   width: 90vh;
@@ -51,6 +51,54 @@
   border-width: 0.2vw;
 }
 
+.location-one {
+  transform: translateY(2vh);
+}
+.location-two {
+  transform: rotate(22.5deg) translateX(15vh) translateY(-3vh);
+}
+.location-three {
+  transform: rotate(45deg) translateX(28vh) translateY(-14vh);
+}
+.location-four {
+  transform: rotate(67.5deg) translateX(35vh) translateY(-28vh);
+}
+.location-five {
+  transform: rotate(90deg) translateX(35vh) translateY(-42vh);
+}
+.location-six {
+  transform: rotate(112.5deg) translateX(28vh) translateY(-54vh);
+}
+.location-seven {
+  transform: rotate(135deg) translateX(20vh) translateY(-63vh);
+}
+.location-eight {
+  transform: rotate(157.5deg) translateX(10vh) translateY(-68vh);
+}
+.location-nine {
+  transform: rotate(180deg) translateY(-68vh);
+}
+.location-ten {
+  transform: rotate(202.5deg) translateX(-10vh) translateY(-63vh);
+}
+.location-eleven {
+  transform: rotate(225deg) translateX(-18vh) translateY(-56vh);
+}
+.location-twelve {
+  transform: rotate(247.5deg) translateX(-18vh) translateY(-48vh);
+}
+.location-thirteen {
+  transform: rotate(270deg) translateX(-18vh) translateY(-41vh);
+}
+.location-fourteen {
+  transform: rotate(292.5deg) translateX(-15vh) translateY(-35vh);
+}
+.location-fifteen {
+  transform: rotate(315deg) translateX(-10vh) translateY(-32vh);
+}
+.location-sixteen {
+  transform: rotate(337.5deg) translateX(-4vh) translateY(-32vh);
+}
 a {
   font-weight: 500;
   color: #646cff;

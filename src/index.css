@@ -14,7 +14,7 @@
   -webkit-text-size-adjust: 100%;
 }
 #background {
-  position: relative;
+  /* position: relative; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,7 +22,7 @@
 #outer-wheel {
   font-size: 1.5vh;
   position: relative;
-  position: absolute;
+  /* position: absolute; */
   border-radius: 50%;
   height: 90vh;
   width: 90vh;
@@ -32,18 +32,27 @@
   flood-color: antiquewhite;
 }
 #inner-wheel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  /* margin-left: auto;
+  margin-right: auto;
+  margin: auto;
+  transform: translateY(-28vh); */
+  left: 7.5vh;
+  top: 7.5vh;
   border-radius: 50%;
-  height: 80vh;
-  width: 80vh;
+  position: absolute;
+  height: 75vh;
+  width: 75vh;
   border-color: black;
   border-style: solid;
   border-width: 0.3vh;
 }
 #ring-wheel {
+  transform: translateX(36.5vh) translateY(36.5vh);
   border-radius: 50%;
+  /* margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto; */
   height: 1vw;
   width: 1vw;
   border-color: burlywood;
@@ -52,52 +61,100 @@
 }
 
 .location-one {
-  transform: translateY(2vh);
+  position: absolute;
+  left: calc(50% - 20px);
+  top: calc(50%);
+  transform: translateY(-43vh);
 }
 .location-two {
-  transform: rotate(22.5deg) translateX(15vh) translateY(-3vh);
+  position: absolute;
+  left: calc(50% - 20px);
+  top: calc(50%);
+  transform: rotate(22.5deg) translateY(-43vh);
 }
 .location-three {
-  transform: rotate(45deg) translateX(28vh) translateY(-14vh);
+  position: absolute;
+  left: calc(50% - 20px);
+  top: calc(50%);
+  transform: rotate(45deg) translateY(-42vh);
 }
 .location-four {
-  transform: rotate(67.5deg) translateX(35vh) translateY(-28vh);
+  position: absolute;
+  left: calc(50% - 20px);
+  top: calc(50%);
+  transform: rotate(67.5deg) translateY(-42vh);
 }
 .location-five {
-  transform: rotate(90deg) translateX(35vh) translateY(-42vh);
+  position: absolute;
+  left: calc(50% - 20px);
+  top: calc(50%);
+  transform: rotate(90deg) translateY(-42vh);
 }
 .location-six {
-  transform: rotate(112.5deg) translateX(28vh) translateY(-54vh);
+  position: absolute;
+  left: calc(50% - 20px);
+  top: calc(50%);
+  transform: rotate(112.5deg) translateY(-41vh);
 }
 .location-seven {
-  transform: rotate(135deg) translateX(20vh) translateY(-63vh);
+  position: absolute;
+  left: calc(50% - 20px);
+  top: calc(50%);
+  transform: rotate(135deg) translateY(-41vh);
 }
 .location-eight {
-  transform: rotate(157.5deg) translateX(10vh) translateY(-68vh);
+  position: absolute;
+  left: calc(50% - 20px);
+  top: calc(50%);
+  transform: rotate(157.5deg) translateY(-41vh);
 }
 .location-nine {
-  transform: rotate(180deg) translateY(-68vh);
+  position: absolute;
+  left: calc(50% - 20px);
+  top: calc(50%);
+  transform: rotate(180deg) translateY(-41vh);
 }
 .location-ten {
-  transform: rotate(202.5deg) translateX(-10vh) translateY(-63vh);
+  position: absolute;
+  left: calc(50% - 20px);
+  top: calc(50%);
+  transform: rotate(202.5deg) translateY(-41vh);
 }
 .location-eleven {
-  transform: rotate(225deg) translateX(-18vh) translateY(-56vh);
+  position: absolute;
+  left: calc(50% - 20px);
+  top: calc(50%);
+  transform: rotate(225deg) translateY(-40vh);
 }
 .location-twelve {
-  transform: rotate(247.5deg) translateX(-18vh) translateY(-48vh);
+  position: absolute;
+  left: calc(50% - 20px);
+  top: calc(50%);
+  transform: rotate(247.5deg) translateY(-40vh);
 }
 .location-thirteen {
-  transform: rotate(270deg) translateX(-18vh) translateY(-41vh);
+  position: absolute;
+  left: calc(50% - 20px);
+  top: calc(50%);
+  transform: rotate(270deg) translateY(-41vh);
 }
 .location-fourteen {
-  transform: rotate(292.5deg) translateX(-15vh) translateY(-35vh);
+  position: absolute;
+  left: calc(50% - 20px);
+  top: calc(50%);
+  transform: rotate(292.5deg) translateY(-41vh);
 }
 .location-fifteen {
-  transform: rotate(315deg) translateX(-10vh) translateY(-32vh);
+  position: absolute;
+  left: calc(50% - 20px);
+  top: calc(50%);
+  transform: rotate(315deg) translateY(-42vh);
 }
 .location-sixteen {
-  transform: rotate(337.5deg) translateX(-4vh) translateY(-32vh);
+  position: absolute;
+  left: calc(50% - 20px);
+  top: calc(50%);
+  transform: rotate(337.5deg) translateY(-43vh);
 }
 a {
   font-weight: 500;

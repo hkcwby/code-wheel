@@ -14,7 +14,6 @@
   -webkit-text-size-adjust: 100%;
 }
 #background {
-  /* position: relative; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -62,99 +61,115 @@
 
 .location-0 {
   position: absolute;
-  left: calc(50% - 20px);
+  width: 16vh;
+  left: calc(50% - 8vh);
   top: calc(50%);
   transform: translateY(-42vh);
 }
 .location-1 {
   position: absolute;
-  left: calc(50% - 20px);
+  width: 16vh;
+  left: calc(50% - 8vh);
   top: calc(50%);
   transform: rotate(22.5deg) translateY(-42vh);
 }
 .location-2 {
   position: absolute;
-  left: calc(50% - 20px);
+  width: 16vh;
+  left: calc(50% - 8vh);
   top: calc(50%);
-  transform: rotate(45deg) translateY(-41vh);
+  transform: rotate(45deg) translateY(-42vh);
 }
 .location-3 {
   position: absolute;
-  left: calc(50% - 20px);
+  width: 16vh;
+  left: calc(50% - 8vh);
   top: calc(50%);
-  transform: rotate(67.5deg) translateY(-41vh);
+  transform: rotate(67.5deg) translateY(-42vh);
 }
 .location-4 {
   position: absolute;
-  left: calc(50% - 20px);
+  width: 16vh;
+  left: calc(50% - 8vh);
   top: calc(50%);
-  transform: rotate(90deg) translateY(-40vh);
+  transform: rotate(90deg) translateY(-42vh);
 }
 .location-5 {
   position: absolute;
-  left: calc(50% - 20px);
+  width: 16vh;
+  left: calc(50% - 8vh);
   top: calc(50%);
-  transform: rotate(112.5deg) translateY(-40vh);
+  transform: rotate(112.5deg) translateY(-41vh);
 }
 .location-6 {
   position: absolute;
-  left: calc(50% - 20px);
+  width: 16vh;
+  left: calc(50% - 8vh);
   top: calc(50%);
-  transform: rotate(135deg) translateY(-40vh);
+  transform: rotate(135deg) translateY(-41vh);
 }
 .location-7 {
   position: absolute;
-  left: calc(50% - 20px);
+  width: 16vh;
+  left: calc(50% - 8vh);
   top: calc(50%);
-  transform: rotate(157.5deg) translateY(-40vh);
+  transform: rotate(157.5deg) translateY(-41vh);
 }
 .location-8 {
   position: absolute;
-  left: calc(50% - 20px);
+  width: 16vh;
+  left: calc(50% - 8vh);
   top: calc(50%);
   transform: rotate(180deg) translateY(-41vh);
 }
 .location-9 {
   position: absolute;
-  left: calc(50% - 20px);
+  width: 16vh;
+  left: calc(50% - 8vh);
   top: calc(50%);
   transform: rotate(202.5deg) translateY(-41vh);
 }
 .location-10 {
   position: absolute;
-  left: calc(50% - 20px);
+  width: 16vh;
+  left: calc(50% - 8vh);
   top: calc(50%);
-  transform: rotate(225deg) translateY(-42vh);
+  transform: rotate(225deg) translateY(-41vh);
 }
 .location-11 {
   position: absolute;
-  left: calc(50% - 20px);
+  width: 16vh;
+  left: calc(50% - 8vh);
   top: calc(50%);
   transform: rotate(247.5deg) translateY(-41vh);
 }
 .location-12 {
   position: absolute;
-  left: calc(50% - 20px);
+  width: 16vh;
+  left: calc(50% - 8vh);
   top: calc(50%);
   transform: rotate(270deg) translateY(-42vh);
 }
 .location-13 {
   position: absolute;
-  left: calc(50% - 20px);
+  width: 16vh;
+  left: calc(50% - 8vh);
   top: calc(50%);
-  transform: rotate(292.5deg) translateY(-41vh);
+  transform: rotate(292.5deg) translateY(-42vh);
 }
 .location-14 {
   position: absolute;
-  left: calc(50% - 20px);
+  width: 16vh;
+  left: calc(50% - 8vh);
   top: calc(50%);
-  transform: rotate(315deg) translateY(-43vh);
+  transform: rotate(315deg) translateY(-42vh);
 }
 .location-15 {
   position: absolute;
-  left: calc(50% - 20px);
+  width: 16vh;
+  left: calc(50% - 8vh);
   top: calc(50%);
-  transform: rotate(337.5deg) translateY(-43vh);
+  transform: rotate(337.5deg) translateY(-42vh);
 }
 a {
   font-weight: 500;

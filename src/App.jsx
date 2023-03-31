@@ -3,29 +3,46 @@ import "./App.css";
 import wheelData from "./assets/wheelData";
 
 function App() {
-  console.log(wheelData.Freeside.Cyberdeck.AI);
+  const outerWheel = [
+    "Chatsubo",
+    "Cyberspace",
+    "Gemeinschaft",
+    "Crazy Edo",
+    "Microsofts",
+    "Cheap Hotel",
+    "Julius Deane",
+    "Donut World",
+    "Lawbot",
+    "database",
+    "Shiva",
+    "Freeside",
+    "softwarez",
+    "Matrix",
+    "Matt Shaw",
+    "Night City News",
+  ];
+
+  const [outer, setOuter] = useState(outerWheel);
+
+  function outerWheelShift(position) {
+    const mod = outer.splice(0, position);
+    setOuter(outer.concat(...mod));
+  }
 
   return (
     <div className="App">
       <div id="background">
         <div id="outer-wheel">
           <div>
-            <div className="location-one">Chatsubo</div>
-            <div className="location-two">Cyberspace</div>
-            <div className="location-three">Gemeinschaft</div>
-            <div className="location-four">Crazy Edo</div>
-            <div className="location-five">Microsofts</div>
-            <div className="location-six">Cheap Hotel</div>
-            <div className="location-seven">Julius Deane</div>
-            <div className="location-eight">Donut World</div>
-            <div className="location-nine">Lawbot</div>
-            <div className="location-ten">database</div>
-            <div className="location-eleven">Shiva</div>
-            <div className="location-twelve">Freeside</div>
-            <div className="location-thirteen">softwarez</div>
-            <div className="location-fourteen">Matrix</div>
-            <div className="location-fifteen">Matt Shaw</div>
-            <div className="location-sixteen">Night City News</div>
+            {outer.map((item, index) => (
+              <div
+                key={index}
+                className={"location-" + index}
+                onClick={() => outerWheelShift(index)}
+              >
+                {item}
+              </div>
+            ))}
           </div>
           <div id="inner-wheel">
             <div id="ring-wheel"></div>

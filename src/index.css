@@ -36,8 +36,8 @@
   margin-right: auto;
   margin: auto;
   transform: translateY(-28vh); */
-  left: 7.5vh;
-  top: 7.5vh;
+  left: 7vh;
+  top: 7vh;
   border-radius: 50%;
   position: absolute;
   height: 75vh;
@@ -60,97 +60,97 @@
   border-width: 0.2vw;
 }
 
-.location-one {
+.location-0 {
   position: absolute;
   left: calc(50% - 20px);
   top: calc(50%);
-  transform: translateY(-43vh);
+  transform: translateY(-42vh);
 }
-.location-two {
+.location-1 {
   position: absolute;
   left: calc(50% - 20px);
   top: calc(50%);
-  transform: rotate(22.5deg) translateY(-43vh);
+  transform: rotate(22.5deg) translateY(-42vh);
 }
-.location-three {
+.location-2 {
   position: absolute;
   left: calc(50% - 20px);
   top: calc(50%);
-  transform: rotate(45deg) translateY(-42vh);
+  transform: rotate(45deg) translateY(-41vh);
 }
-.location-four {
+.location-3 {
   position: absolute;
   left: calc(50% - 20px);
   top: calc(50%);
-  transform: rotate(67.5deg) translateY(-42vh);
+  transform: rotate(67.5deg) translateY(-41vh);
 }
-.location-five {
+.location-4 {
   position: absolute;
   left: calc(50% - 20px);
   top: calc(50%);
-  transform: rotate(90deg) translateY(-42vh);
+  transform: rotate(90deg) translateY(-40vh);
 }
-.location-six {
+.location-5 {
   position: absolute;
   left: calc(50% - 20px);
   top: calc(50%);
-  transform: rotate(112.5deg) translateY(-41vh);
+  transform: rotate(112.5deg) translateY(-40vh);
 }
-.location-seven {
+.location-6 {
   position: absolute;
   left: calc(50% - 20px);
   top: calc(50%);
-  transform: rotate(135deg) translateY(-41vh);
+  transform: rotate(135deg) translateY(-40vh);
 }
-.location-eight {
+.location-7 {
   position: absolute;
   left: calc(50% - 20px);
   top: calc(50%);
-  transform: rotate(157.5deg) translateY(-41vh);
+  transform: rotate(157.5deg) translateY(-40vh);
 }
-.location-nine {
+.location-8 {
   position: absolute;
   left: calc(50% - 20px);
   top: calc(50%);
   transform: rotate(180deg) translateY(-41vh);
 }
-.location-ten {
+.location-9 {
   position: absolute;
   left: calc(50% - 20px);
   top: calc(50%);
   transform: rotate(202.5deg) translateY(-41vh);
 }
-.location-eleven {
+.location-10 {
   position: absolute;
   left: calc(50% - 20px);
   top: calc(50%);
-  transform: rotate(225deg) translateY(-40vh);
+  transform: rotate(225deg) translateY(-42vh);
 }
-.location-twelve {
+.location-11 {
   position: absolute;
   left: calc(50% - 20px);
   top: calc(50%);
-  transform: rotate(247.5deg) translateY(-40vh);
+  transform: rotate(247.5deg) translateY(-41vh);
 }
-.location-thirteen {
+.location-12 {
   position: absolute;
   left: calc(50% - 20px);
   top: calc(50%);
-  transform: rotate(270deg) translateY(-41vh);
+  transform: rotate(270deg) translateY(-42vh);
 }
-.location-fourteen {
+.location-13 {
   position: absolute;
   left: calc(50% - 20px);
   top: calc(50%);
   transform: rotate(292.5deg) translateY(-41vh);
 }
-.location-fifteen {
+.location-14 {
   position: absolute;
   left: calc(50% - 20px);
   top: calc(50%);
-  transform: rotate(315deg) translateY(-42vh);
+  transform: rotate(315deg) translateY(-43vh);
 }
-.location-sixteen {
+.location-15 {
   position: absolute;
   left: calc(50% - 20px);
   top: calc(50%);

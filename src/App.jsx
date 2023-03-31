@@ -22,11 +22,18 @@ function App() {
     "Night City News",
   ];
 
+  const innerWheel = Object.keys(wheelData.Chatsubo);
+
   const [outer, setOuter] = useState(outerWheel);
+  const [inner, setInner] = useState(innerWheel);
 
   function outerWheelShift(position) {
     const mod = outer.splice(0, position);
     setOuter(outer.concat(...mod));
+  }
+  function innerWheelShift(position) {
+    const mod = inner.splice(0, position);
+    setInner(inner.concat(...mod));
   }
 
   return (
@@ -37,7 +44,7 @@ function App() {
             {outer.map((item, index) => (
               <div
                 key={index}
-                className={"location-" + index}
+                className={"outer-" + index}
                 onClick={() => outerWheelShift(index)}
               >
                 {item}
@@ -45,6 +52,15 @@ function App() {
             ))}
           </div>
           <div id="inner-wheel">
+            {inner.map((item, index) => (
+              <div
+                key={index}
+                className={"inner-" + index}
+                onClick={() => innerWheelShift(index)}
+              >
+                {item}
+              </div>
+            ))}
             <div id="ring-wheel"></div>
           </div>
         </div>

@@ -21,14 +21,14 @@
 #outer-wheel {
   font-size: 1.5vh;
   position: relative;
-  /* position: absolute; */
   border-radius: 50%;
   height: 90vh;
   width: 90vh;
   border-color: black;
   border-style: solid;
   border-width: 0.3vh;
-  flood-color: antiquewhite;
+  background-color: antiquewhite;
+  color: black;
 }
 #inner-wheel {
   /* margin-left: auto;
@@ -59,118 +59,232 @@
   border-width: 0.2vw;
 }
 
-.location-0 {
+.outer-0 {
   position: absolute;
   width: 16vh;
   left: calc(50% - 8vh);
   top: calc(50%);
   transform: translateY(-42vh);
 }
-.location-1 {
+.outer-1 {
   position: absolute;
   width: 16vh;
   left: calc(50% - 8vh);
   top: calc(50%);
   transform: rotate(22.5deg) translateY(-42vh);
 }
-.location-2 {
+.outer-2 {
   position: absolute;
   width: 16vh;
   left: calc(50% - 8vh);
   top: calc(50%);
   transform: rotate(45deg) translateY(-42vh);
 }
-.location-3 {
+.outer-3 {
   position: absolute;
   width: 16vh;
   left: calc(50% - 8vh);
   top: calc(50%);
   transform: rotate(67.5deg) translateY(-42vh);
 }
-.location-4 {
+.outer-4 {
   position: absolute;
   width: 16vh;
   left: calc(50% - 8vh);
   top: calc(50%);
   transform: rotate(90deg) translateY(-42vh);
 }
-.location-5 {
+.outer-5 {
   position: absolute;
   width: 16vh;
   left: calc(50% - 8vh);
   top: calc(50%);
   transform: rotate(112.5deg) translateY(-41vh);
 }
-.location-6 {
+.outer-6 {
   position: absolute;
   width: 16vh;
   left: calc(50% - 8vh);
   top: calc(50%);
   transform: rotate(135deg) translateY(-41vh);
 }
-.location-7 {
+.outer-7 {
   position: absolute;
   width: 16vh;
   left: calc(50% - 8vh);
   top: calc(50%);
   transform: rotate(157.5deg) translateY(-41vh);
 }
-.location-8 {
+.outer-8 {
   position: absolute;
   width: 16vh;
   left: calc(50% - 8vh);
   top: calc(50%);
   transform: rotate(180deg) translateY(-41vh);
 }
-.location-9 {
+.outer-9 {
   position: absolute;
   width: 16vh;
   left: calc(50% - 8vh);
   top: calc(50%);
   transform: rotate(202.5deg) translateY(-41vh);
 }
-.location-10 {
+.outer-10 {
   position: absolute;
   width: 16vh;
   left: calc(50% - 8vh);
   top: calc(50%);
   transform: rotate(225deg) translateY(-41vh);
 }
-.location-11 {
+.outer-11 {
   position: absolute;
   width: 16vh;
   left: calc(50% - 8vh);
   top: calc(50%);
   transform: rotate(247.5deg) translateY(-41vh);
 }
-.location-12 {
+.outer-12 {
   position: absolute;
   width: 16vh;
   left: calc(50% - 8vh);
   top: calc(50%);
   transform: rotate(270deg) translateY(-42vh);
 }
-.location-13 {
+.outer-13 {
   position: absolute;
   width: 16vh;
   left: calc(50% - 8vh);
   top: calc(50%);
   transform: rotate(292.5deg) translateY(-42vh);
 }
-.location-14 {
+.outer-14 {
   position: absolute;
   width: 16vh;
   left: calc(50% - 8vh);
   top: calc(50%);
   transform: rotate(315deg) translateY(-42vh);
 }
-.location-15 {
+.outer-15 {
   position: absolute;
   width: 16vh;
   left: calc(50% - 8vh);
   top: calc(50%);
   transform: rotate(337.5deg) translateY(-42vh);
 }
+
+.inner-0 {
+  position: absolute;
+  width: 16vh;
+  left: calc(50% - 8vh);
+  top: calc(50%);
+  transform: translateY(-36vh);
+}
+.inner-1 {
+  position: absolute;
+  width: 16vh;
+  left: calc(50% - 8vh);
+  top: calc(50%);
+  transform: rotate(22.5deg) translateY(-36vh);
+}
+.inner-2 {
+  position: absolute;
+  width: 16vh;
+  left: calc(50% - 8vh);
+  top: calc(50%);
+  transform: rotate(45deg) translateY(-36vh);
+}
+.inner-3 {
+  position: absolute;
+  width: 16vh;
+  left: calc(50% - 8vh);
+  top: calc(50%);
+  transform: rotate(67.5deg) translateY(-36vh);
+}
+.inner-4 {
+  position: absolute;
+  width: 16vh;
+  left: calc(50% - 8vh);
+  top: calc(50%);
+  transform: rotate(90deg) translateY(-36vh);
+}
+.inner-5 {
+  position: absolute;
+  width: 16vh;
+  left: calc(50% - 8vh);
+  top: calc(50%);
+  transform: rotate(112.5deg) translateY(-35vh);
+}
+.inner-6 {
+  position: absolute;
+  width: 16vh;
+  left: calc(50% - 8vh);
+  top: calc(50%);
+  transform: rotate(135deg) translateY(-35vh);
+}
+.inner-7 {
+  position: absolute;
+  width: 16vh;
+  left: calc(50% - 8vh);
+  top: calc(50%);
+  transform: rotate(157.5deg) translateY(-35vh);
+}
+.inner-8 {
+  position: absolute;
+  width: 16vh;
+  left: calc(50% - 8vh);
+  top: calc(50%);
+  transform: rotate(180deg) translateY(-35vh);
+}
+.inner-9 {
+  position: absolute;
+  width: 16vh;
+  left: calc(50% - 8vh);
+  top: calc(50%);
+  transform: rotate(202.5deg) translateY(-35vh);
+}
+.inner-10 {
+  position: absolute;
+  width: 16vh;
+  left: calc(50% - 8vh);
+  top: calc(50%);
+  transform: rotate(225deg) translateY(-35vh);
+}
+.inner-11 {
+  position: absolute;
+  width: 16vh;
+  left: calc(50% - 8vh);
+  top: calc(50%);
+  transform: rotate(247.5deg) translateY(-35vh);
+}
+.inner-12 {
+  position: absolute;
+  width: 16vh;
+  left: calc(50% - 8vh);
+  top: calc(50%);
+  transform: rotate(270deg) translateY(-36vh);
+}
+.inner-13 {
+  position: absolute;
+  width: 16vh;
+  left: calc(50% - 8vh);
+  top: calc(50%);
+  transform: rotate(292.5deg) translateY(-36vh);
+}
+.inner-14 {
+  position: absolute;
+  width: 16vh;
+  left: calc(50% - 8vh);
+  top: calc(50%);
+  transform: rotate(315deg) translateY(-36vh);
+}
+.inner-15 {
+  position: absolute;
+  width: 16vh;
+  left: calc(50% - 8vh);
+  top: calc(50%);
+  transform: rotate(337.5deg) translateY(-36vh);
+}
+
 a {
   font-weight: 500;
   color: #646cff;

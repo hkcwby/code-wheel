@@ -285,6 +285,121 @@
   transform: rotate(337.5deg) translateY(-36vh);
 }
 
+.layer-one-0 {
+  position: absolute;
+  width: 16vh;
+  left: calc(50% - 8vh);
+  top: calc(50%);
+  transform: translateY(-33vh);
+}
+.layer-one-1 {
+  position: absolute;
+  width: 16vh;
+  left: calc(50% - 8vh);
+  top: calc(50%);
+  transform: rotate(22.5deg) translateY(-33vh);
+  border-top-style: solid;
+}
+.layer-one-2 {
+  position: absolute;
+  width: 16vh;
+  left: calc(50% - 8vh);
+  top: calc(50%);
+  transform: rotate(45deg) translateY(-33vh);
+}
+.layer-one-3 {
+  position: absolute;
+  width: 16vh;
+  left: calc(50% - 8vh);
+  top: calc(50%);
+  transform: rotate(67.5deg) translateY(-33vh);
+}
+.layer-one-4 {
+  position: absolute;
+  width: 16vh;
+  left: calc(50% - 8vh);
+  top: calc(50%);
+  transform: rotate(90deg) translateY(-33vh);
+}
+.layer-one-5 {
+  position: absolute;
+  width: 16vh;
+  left: calc(50% - 8vh);
+  top: calc(50%);
+  transform: rotate(112.5deg) translateY(-32vh);
+}
+.layer-one-6 {
+  position: absolute;
+  width: 16vh;
+  left: calc(50% - 8vh);
+  top: calc(50%);
+  transform: rotate(135deg) translateY(-32vh);
+}
+.layer-one-7 {
+  position: absolute;
+  width: 16vh;
+  left: calc(50% - 8vh);
+  top: calc(50%);
+  transform: rotate(157.5deg) translateY(-32vh);
+}
+.layer-one-8 {
+  position: absolute;
+  width: 16vh;
+  left: calc(50% - 8vh);
+  top: calc(50%);
+  transform: rotate(180deg) translateY(-32vh);
+}
+.layer-one-9 {
+  position: absolute;
+  width: 16vh;
+  left: calc(50% - 8vh);
+  top: calc(50%);
+  transform: rotate(202.5deg) translateY(-32vh);
+}
+.layer-one-10 {
+  position: absolute;
+  width: 16vh;
+  left: calc(50% - 8vh);
+  top: calc(50%);
+  transform: rotate(225deg) translateY(-32vh);
+}
+.layer-one-11 {
+  position: absolute;
+  width: 16vh;
+  left: calc(50% - 8vh);
+  top: calc(50%);
+  transform: rotate(247.5deg) translateY(-32vh);
+}
+.layer-one-12 {
+  position: absolute;
+  width: 16vh;
+  left: calc(50% - 8vh);
+  top: calc(50%);
+  transform: rotate(270deg) translateY(-32vh);
+}
+.layer-one-13 {
+  position: absolute;
+  width: 16vh;
+  left: calc(50% - 8vh);
+  top: calc(50%);
+  transform: rotate(292.5deg) translateY(-33vh);
+}
+.layer-one-14 {
+  position: absolute;
+  width: 16vh;
+  left: calc(50% - 8vh);
+  top: calc(50%);
+  transform: rotate(315deg) translateY(-33vh);
+}
+.layer-one-15 {
+  position: absolute;
+  width: 16vh;
+  left: calc(50% - 8vh);
+  top: calc(50%);
+  transform: rotate(337.5deg) translateY(-33vh);
+  border-top-style: solid;
+}
+
 a {
   font-weight: 500;
   color: #646cff;

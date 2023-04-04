@@ -3,6 +3,24 @@ import "./App.css";
 import wheelData from "./assets/wheelData";
 
 function App() {
+  const outerRef = {
+    Chatsubo: "chatsubo",
+    Cyberspace: "cyberspace",
+    Gemeinschaft: "gemeinschaft",
+    "Crazy Edo": "crazyEdo",
+    Microsofts: "microsofts",
+    "Cheap Hotel": "cheapHotel",
+    "Julius Deane": "juliusDeane",
+    "Donut World": "donutWorld",
+    Lawbot: "lawbot",
+    database: "database",
+    Shiva: "shiva",
+    Freeside: "freeside",
+    softwarez: "softwarez",
+    Matrix: "matrix",
+    "Matt Shaw": "mattShaw",
+    "Night City News": "nightCityNews",
+  };
   const outerWheel = [
     "Chatsubo",
     "Cyberspace",
@@ -197,19 +215,24 @@ function App() {
 
   function updateValues(inner, outer) {
     const data = wheelData;
-    console.log(data[outer][inner]);
-    console.log(inner, outer);
+    console.log(outer[inner.indexOf("Holografix")]);
+    console.log(inner);
+    console.log(outer);
+    // console.log(data[outer][inner]);
+    // console.log(inner, outer);
     //setAsanoComputing()
   }
 
   function outerWheelShift(position) {
     const mod = outer.splice(0, position);
     setOuter(outer.concat(...mod));
-    updateValues(inner[0], outer[0]);
+    console.log(outer);
+    // updateValues(inner, outer);
   }
 
   function innerWheelShift(position) {
     const mod = inner.splice(0, position);
+    updateValues(inner.concat(...mod), outer);
     setInner(inner.concat(...mod));
     const modOne = layerOne.splice(0, position);
     setLayerOne(layerOne.concat(...modOne));
@@ -227,7 +250,6 @@ function App() {
     setLayerSeven(layerSeven.concat(...modSeven));
     const modEight = layerEight.splice(0, position);
     setLayerEight(layerEight.concat(...modEight));
-    updateValues(inner[0], outer[0]);
   }
 
   return (

@@ -980,7 +980,7 @@
 
 .layer-seven-0 {
   position: absolute;
-  width: 5vh;
+  width: 5.5vh;
   overflow-wrap: break-word;
   left: calc(50% - 3vh);
   top: calc(50%);
@@ -988,7 +988,7 @@
 }
 .layer-seven-1 {
   position: absolute;
-  width: 5vh;
+  width: 5.5vh;
   overflow-wrap: break-word;
   left: calc(50% - 3vh);
   top: calc(50%);
@@ -996,7 +996,7 @@
 }
 .layer-seven-2 {
   position: absolute;
-  width: 5vh;
+  width: 5.5vh;
   overflow-wrap: break-word;
   left: calc(50% - 3vh);
   top: calc(50%);
@@ -1004,7 +1004,7 @@
 }
 .layer-seven-3 {
   position: absolute;
-  width: 5vh;
+  width: 5.5vh;
   overflow-wrap: break-word;
   left: calc(50% - 3vh);
   top: calc(50%);
@@ -1012,7 +1012,7 @@
 }
 .layer-seven-4 {
   position: absolute;
-  width: 5vh;
+  width: 5.5vh;
   overflow-wrap: break-word;
   left: calc(50% - 3vh);
   top: calc(50%);
@@ -1020,7 +1020,7 @@
 }
 .layer-seven-5 {
   position: absolute;
-  width: 5vh;
+  width: 5.5vh;
   overflow-wrap: break-word;
   left: calc(50% - 3vh);
   top: calc(50%);
@@ -1028,7 +1028,7 @@
 }
 .layer-seven-6 {
   position: absolute;
-  width: 5vh;
+  width: 5.5vh;
   overflow-wrap: break-word;
   left: calc(50% - 3vh);
   top: calc(50%);
@@ -1036,7 +1036,7 @@
 }
 .layer-seven-7 {
   position: absolute;
-  width: 5vh;
+  width: 5.5vh;
   overflow-wrap: break-word;
   left: calc(50% - 3vh);
   top: calc(50%);
@@ -1044,7 +1044,7 @@
 }
 .layer-seven-8 {
   position: absolute;
-  width: 5vh;
+  width: 5.5vh;
   overflow-wrap: break-word;
   left: calc(50% - 3vh);
   top: calc(50%);
@@ -1052,7 +1052,7 @@
 }
 .layer-seven-9 {
   position: absolute;
-  width: 5vh;
+  width: 5.5vh;
   overflow-wrap: break-word;
   left: calc(50% - 3vh);
   top: calc(50%);
@@ -1060,7 +1060,7 @@
 }
 .layer-seven-10 {
   position: absolute;
-  width: 5vh;
+  width: 5.5vh;
   overflow-wrap: break-word;
   left: calc(50% - 3vh);
   top: calc(50%);
@@ -1068,7 +1068,7 @@
 }
 .layer-seven-11 {
   position: absolute;
-  width: 5vh;
+  width: 5.5vh;
   overflow-wrap: break-word;
   left: calc(50% - 3vh);
   top: calc(50%);
@@ -1076,7 +1076,7 @@
 }
 .layer-seven-12 {
   position: absolute;
-  width: 5vh;
+  width: 5.5vh;
   overflow-wrap: break-word;
   left: calc(50% - 3vh);
   top: calc(50%);
@@ -1084,7 +1084,7 @@
 }
 .layer-seven-13 {
   position: absolute;
-  width: 5vh;
+  width: 5.5vh;
   overflow-wrap: break-word;
   left: calc(50% - 3vh);
   top: calc(50%);
@@ -1092,7 +1092,7 @@
 }
 .layer-seven-14 {
   position: absolute;
-  width: 5vh;
+  width: 5.5vh;
   overflow-wrap: break-word;
   left: calc(50% - 3vh);
   top: calc(50%);
@@ -1100,7 +1100,7 @@
 }
 .layer-seven-15 {
   position: absolute;
-  width: 5vh;
+  width: 5.5vh;
   overflow-wrap: break-word;
   left: calc(50% - 3vh);
   top: calc(50%);
@@ -1109,113 +1109,113 @@
 
 .layer-eight-0 {
   position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
+  width: 5.5vh;
+  left: calc(50% - 3vh);
   top: calc(50%);
   transform: translateY(-10vh);
 }
 .layer-eight-1 {
   position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
+  width: 5.5vh;
+  left: calc(50% - 3vh);
   top: calc(50%);
   transform: rotate(22.5deg) translateY(-10vh);
 }
 .layer-eight-2 {
   position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
+  width: 5.5vh;
+  left: calc(50% - 3vh);
   top: calc(50%);
   transform: rotate(45deg) translateY(-10vh);
 }
 .layer-eight-3 {
   position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
+  width: 5.5vh;
+  left: calc(50% - 3vh);
   top: calc(50%);
   transform: rotate(67.5deg) translateY(-10vh);
 }
 .layer-eight-4 {
   position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
+  width: 5.5vh;
+  left: calc(50% - 3vh);
   top: calc(50%);
   transform: rotate(90deg) translateY(-10vh);
 }
 .layer-eight-5 {
   position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
+  width: 5.5vh;
+  left: calc(50% - 3vh);
   top: calc(50%);
   transform: rotate(112.5deg) translateY(-9vh);
 }
 .layer-eight-6 {
   position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
+  width: 5.5vh;
+  left: calc(50% - 3vh);
   top: calc(50%);
   transform: rotate(135deg) translateY(-9vh);
 }
 .layer-eight-7 {
   position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
+  width: 5.5vh;
+  left: calc(50% - 3vh);
   top: calc(50%);
   transform: rotate(157.5deg) translateY(-9vh);
 }
 .layer-eight-8 {
   position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
+  width: 5.5vh;
+  left: calc(50% - 3vh);
   top: calc(50%);
   transform: rotate(180deg) translateY(-9vh);
 }
 .layer-eight-9 {
   position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
+  width: 5.5vh;
+  left: calc(50% - 3vh);
   top: calc(50%);
   transform: rotate(202.5deg) translateY(-9vh);
 }
 .layer-eight-10 {
   position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
+  width: 5.5vh;
+  left: calc(50% - 3vh);
   top: calc(50%);
   transform: rotate(225deg) translateY(-9vh);
 }
 .layer-eight-11 {
   position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
+  width: 5.5vh;
+  left: calc(50% - 3vh);
   top: calc(50%);
   transform: rotate(247.5deg) translateY(-9vh);
 }
 .layer-eight-12 {
   position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
+  width: 5.5vh;
+  left: calc(50% - 3vh);
   top: calc(50%);
   transform: rotate(270deg) translateY(-9vh);
 }
 .layer-eight-13 {
   position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
+  width: 5.5vh;
+  left: calc(50% - 3vh);
   top: calc(50%);
   transform: rotate(292.5deg) translateY(-10vh);
 }
 .layer-eight-14 {
   position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
+  width: 5.5vh;
+  left: calc(50% - 3vh);
   top: calc(50%);
   transform: rotate(315deg) translateY(-10vh);
 }
 .layer-eight-15 {
   position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
+  width: 5.5vh;
+  left: calc(50% - 3vh);
   top: calc(50%);
   transform: rotate(337.5deg) translateY(-10vh);
 }

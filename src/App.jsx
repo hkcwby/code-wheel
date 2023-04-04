@@ -21,22 +21,22 @@ function App() {
     "Matt Shaw",
     "Night City News",
   ];
-  let asanoComputing = "061254";
-  let spacedock = "031770";
-  let spaceColony = "054127";
-  let flatline = "132077";
-  let ai = "71226";
-  let zionCluster = "43267";
-  let marcusGarvey = "45771";
-  let cryptology = "67237";
-  let chibaCity = "3347";
-  let bankOfBerne = "5165";
-  let bankOfZurich = "1053";
-  let fujiElectric = "6124";
-  let holyJoystick = "333";
-  let onoSendai = "725";
-  let hitachiBiotech = "672";
-  let compuJudge = "054";
+  const [asanoComputing, setAsanoComputing] = useState("061254");
+  const [spacedock, setSpacedock] = useState("031770");
+  const [spaceColony, setSpaceColony] = useState("054127");
+  const [flatline, setFlatline] = useState("132077");
+  const [ai, setAi] = useState("71226");
+  const [zionCluster, setZionCluster] = useState("43267");
+  const [marcusGarvey, setMarcusGarvey] = useState("45771");
+  const [cryptology, setCryptology] = useState("67237");
+  const [chibaCity, setChibaCity] = useState("3347");
+  const [bankOfBerne, setBankOfBerne] = useState("5165");
+  const [bankOfZurich, setBankOfZurich] = useState("1053");
+  const [fujiElectric, setFujiElectric] = useState("6124");
+  const [holyJoystick, setHolyJoystick] = useState("333");
+  const [onoSendai, setOnoSendai] = useState("725");
+  const [hitachiBiotech, setHitachiBiotech] = useState("672");
+  const [compuJudge, setCompuJudge] = useState("054");
 
   const innerWheel = Object.keys(wheelData.Chatsubo);
   const layerOneWheel = [
@@ -195,13 +195,39 @@ function App() {
   const [layerSeven, setLayerSeven] = useState(layerSevenWheel);
   const [layerEight, setLayerEight] = useState(layerEightWheel);
 
+  function updateValues(inner, outer) {
+    const data = wheelData;
+    console.log(data[outer][inner]);
+    console.log(inner, outer);
+    //setAsanoComputing()
+  }
+
   function outerWheelShift(position) {
     const mod = outer.splice(0, position);
     setOuter(outer.concat(...mod));
+    updateValues(inner[0], outer[0]);
   }
+
   function innerWheelShift(position) {
     const mod = inner.splice(0, position);
     setInner(inner.concat(...mod));
+    const modOne = layerOne.splice(0, position);
+    setLayerOne(layerOne.concat(...modOne));
+    const modTwo = layerTwo.splice(0, position);
+    setLayerTwo(layerTwo.concat(...modTwo));
+    const modThree = layerThree.splice(0, position);
+    setLayerThree(layerThree.concat(...modThree));
+    const modFour = layerFour.splice(0, position);
+    setLayerFour(layerFour.concat(...modFour));
+    const modFive = layerFive.splice(0, position);
+    setLayerFive(layerFive.concat(...modFive));
+    const modSix = layerSix.splice(0, position);
+    setLayerSix(layerSix.concat(...modSix));
+    const modSeven = layerSeven.splice(0, position);
+    setLayerSeven(layerSeven.concat(...modSeven));
+    const modEight = layerEight.splice(0, position);
+    setLayerEight(layerEight.concat(...modEight));
+    updateValues(inner[0], outer[0]);
   }
 
   return (

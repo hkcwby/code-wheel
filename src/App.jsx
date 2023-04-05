@@ -215,19 +215,60 @@ function App() {
 
   function updateValues(inner, outer) {
     const data = wheelData;
-    console.log(outer[inner.indexOf("Holografix")]);
-    console.log(inner);
-    console.log(outer);
-    // console.log(data[outer][inner]);
-    // console.log(inner, outer);
-    //setAsanoComputing()
+
+    const outsideValueCyberdeck = outer[inner.indexOf("Cyberdeck")];
+    setAi(data[outsideValueCyberdeck]["Cyberdeck"]["AI"]);
+    setFujiElectric(data[outsideValueCyberdeck]["Cyberdeck"]["Fuji Electric"]);
+
+    const outsideValueRatz = outer[inner.indexOf("Ratz")];
+    setZionCluster(data[outsideValueRatz]["Ratz"]["Zion Cluster"]);
+    setChibaCity(data[outsideValueRatz]["Ratz"]["Chiba City"]);
+
+    const outsideValueHolografix = outer[inner.indexOf("Holografix")];
+    setAsanoComputing(
+      data[outsideValueHolografix]["Holografix"]["Asano Computing"]
+    );
+    setHitachiBiotech(
+      data[outsideValueHolografix]["Holografix"]["Hitachi Biotech"]
+    );
+
+    const outsideValueLarryMoe = outer[inner.indexOf("Larry Moe")];
+    setCryptology(data[outsideValueLarryMoe]["Larry Moe"]["Cryptology"]);
+
+    const outsideValuePAX = outer[inner.indexOf("PAX")];
+    setSpaceColony(data[outsideValuePAX]["PAX"]["Space colony"]);
+    setHolyJoystick(data[outsideValuePAX]["PAX"]["Holy Joystick"]);
+
+    const outsideValueSkillChips = outer[inner.indexOf("Skill chips")];
+    setBankOfBerne(
+      data[outsideValueSkillChips]["Skill chips"]["Bank of Berne"]
+    );
+
+    const outsideValueShinsPawn = outer[inner.indexOf("Shin's Pawn")];
+    setSpacedock(data[outsideValueShinsPawn]["Shin's Pawn"]["Spacedock"]);
+    setOnoSendai(data[outsideValueShinsPawn]["Shin's Pawn"]["Ono-Sendai"]);
+
+    const outsideValueGentlemanLoser = outer[inner.indexOf("Gentleman Loser")];
+    setMarcusGarvey(
+      data[outsideValueGentlemanLoser]["Gentleman Loser"]["Marcus Garvey"]
+    );
+    setBankOfZurich(
+      data[outsideValueGentlemanLoser]["Gentleman Loser"]["Bank of Zurich"]
+    );
+
+    const outsideValueMaasBiolabs = outer[inner.indexOf("Maas Biolabs")];
+    setCompuJudge(data[outsideValueMaasBiolabs]["Maas Biolabs"]["Compu-judge"]);
+
+    const outsideValueJusticeBooth = outer[inner.indexOf("Justice Booth")];
+    setFlatline(data[outsideValueJusticeBooth]["Justice Booth"]["flatline"]);
   }
 
   function outerWheelShift(position) {
     const mod = outer.splice(0, position);
+    updateValues(inner, outer.concat(...mod));
     setOuter(outer.concat(...mod));
-    console.log(outer);
-    // updateValues(inner, outer);
+
+    updateValues(inner, outer);
   }
 
   function innerWheelShift(position) {

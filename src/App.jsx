@@ -214,8 +214,6 @@ function App() {
   const [layerEight, setLayerEight] = useState(layerEightWheel);
 
   function updateValues(inner, outer) {
-    const data = wheelData;
-
     const outsideValueCyberdeck = outer[inner.indexOf("Cyberdeck")];
     ai = wheelData[outsideValueCyberdeck]["Cyberdeck"]["AI"];
     fujiElectric =
@@ -264,15 +262,18 @@ function App() {
 
   function outerWheelShift(position) {
     const mod = outer.splice(0, position);
-    updateValues(inner, outer.concat(...mod));
+    //updateValues(inner, outer.concat(...mod));
     setOuter(outer.concat(...mod));
+    innerWheelShift(0);
   }
 
   function innerWheelShift(position) {
+    const topPosition = 16 - inner.indexOf("Cyberdeck");
     const mod = inner.splice(0, position);
     updateValues(inner.concat(...mod), outer);
     setInner(inner.concat(...mod));
-    const dataOne = [
+
+    let dataOne = [
       "",
       "",
       "",
@@ -290,9 +291,14 @@ function App() {
       "",
       "flatline",
     ];
-    const modOne = dataOne.splice(0, position);
-    setLayerOne([...dataOne].concat(...modOne));
-    const dataTwo = [
+
+    let modOne = dataOne.splice(0, topPosition);
+
+    dataOne = dataOne.concat(modOne);
+    modOne = dataOne.splice(0, position);
+    dataOne = dataOne.concat(modOne);
+    setLayerOne(dataOne);
+    let dataTwo = [
       "",
       "",
       "",
@@ -310,9 +316,11 @@ function App() {
       "",
       flatline,
     ];
-    const modTwo = dataTwo.splice(0, position);
-    setLayerTwo(dataTwo.concat(...modTwo));
-    const dataThree = [
+    let modTwo = dataTwo.splice(0, topPosition);
+    dataTwo = dataTwo.concat(modTwo);
+    modTwo = dataTwo.splice(0, position);
+    setLayerTwo(dataTwo.concat(modTwo));
+    let dataThree = [
       "AI",
       "",
       "",
@@ -330,9 +338,11 @@ function App() {
       "",
       "",
     ];
-    const modThree = dataThree.splice(0, position);
-    setLayerThree(dataThree.concat(...modThree));
-    const dataFour = [
+    let modThree = dataThree.splice(0, topPosition);
+    dataThree = dataThree.concat(modThree);
+    modThree = dataThree.splice(0, position);
+    setLayerThree(dataThree.concat(modThree));
+    let dataFour = [
       ai,
       "",
       "",
@@ -350,9 +360,11 @@ function App() {
       "",
       "",
     ];
-    const modFour = dataFour.splice(0, position);
-    setLayerFour(dataFour.concat(...modFour));
-    const dataFive = [
+    let modFour = dataFour.splice(0, topPosition);
+    dataFour = dataFour.concat(modFour);
+    modFour = dataFour.splice(0, position);
+    setLayerFour(dataFour.concat(modFour));
+    let dataFive = [
       "",
       "",
       "",
@@ -370,9 +382,11 @@ function App() {
       "",
       "",
     ];
-    const modFive = dataFive.splice(0, position);
-    setLayerFive(dataFive.concat(...modFive));
-    const dataSix = [
+    let modFive = dataFive.splice(0, topPosition);
+    dataFive = dataFive.concat(modFive);
+    modFive = dataFive.splice(0, position);
+    setLayerFive(dataFive.concat(modFive));
+    let dataSix = [
       fujiElectric,
       "",
       "",
@@ -390,9 +404,11 @@ function App() {
       "Compu-judge",
       "",
     ];
-    const modSix = dataSix.splice(0, position);
-    setLayerSix(dataSix.concat(...modSix));
-    const dataSeven = [
+    let modSix = dataSix.splice(0, topPosition);
+    dataSix = dataSix.concat(modSix);
+    modSix = dataSix.splice(0, position);
+    setLayerSix(dataSix.concat(modSix));
+    let dataSeven = [
       "Fuji Electric",
       "",
       "",
@@ -410,9 +426,11 @@ function App() {
       compuJudge,
       "",
     ];
-    const modSeven = dataSeven.splice(0, position);
-    setLayerSeven(dataSeven.concat(...modSeven));
-    const dataEight = [
+    let modSeven = dataSeven.splice(0, topPosition);
+    dataSeven = dataSeven.concat(modSeven);
+    modSeven = dataSeven.splice(0, position);
+    setLayerSeven(dataSeven.concat(modSeven));
+    let dataEight = [
       "",
       "",
       "",
@@ -430,8 +448,10 @@ function App() {
       "",
       "",
     ];
-    const modEight = dataEight.splice(0, position);
-    setLayerEight(dataEight.concat(...modEight));
+    let modEight = dataEight.splice(0, topPosition);
+    dataEight = dataEight.concat(modEight);
+    modEight = dataEight.splice(0, position);
+    setLayerEight(dataEight.concat(modEight));
   }
 
   return (

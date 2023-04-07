@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import wheelData from "./assets/wheelData";
 
@@ -260,18 +260,23 @@ function App() {
     flatline = wheelData[outsideValueJusticeBooth]["Justice Booth"]["flatline"];
   }
 
-  function outerWheelShift(position) {
-    const data = [...outer];
-    const mod = data.splice(0, position);
-    //updateValues(inner, outer.concat(...mod));
-    setOuter(data.concat(mod));
+  useEffect(() => {
     innerWheelShift(0);
+  }, [outer]);
+
+  function outerWheelShift(position) {
+    let data = [...outer];
+    const mod = data.splice(0, position);
+    updateValues(inner, outer.concat(...mod));
+    data = data.concat(mod);
+    setOuter(data);
   }
 
   function innerWheelShift(position) {
     const topPosition = 16 - inner.indexOf("Cyberdeck");
     const mod = inner.splice(0, position);
     updateValues(inner.concat(...mod), outer);
+    console.log(outer);
     setInner(inner.concat(...mod));
 
     let dataOne = [
@@ -298,7 +303,7 @@ function App() {
     dataOne = dataOne.concat(modOne);
     modOne = dataOne.splice(0, position);
     dataOne = dataOne.concat(modOne);
-    setLayerOne(dataOne);
+    setLayerOne([...dataOne]);
     let dataTwo = [
       "",
       "",

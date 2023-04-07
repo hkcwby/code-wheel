@@ -261,9 +261,10 @@ function App() {
   }
 
   function outerWheelShift(position) {
-    const mod = outer.splice(0, position);
+    const data = [...outer];
+    const mod = data.splice(0, position);
     //updateValues(inner, outer.concat(...mod));
-    setOuter(outer.concat(...mod));
+    setOuter(data.concat(mod));
     innerWheelShift(0);
   }
 

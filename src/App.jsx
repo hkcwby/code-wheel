@@ -3,24 +3,6 @@ import "./App.css";
 import wheelData from "./assets/wheelData";
 
 function App() {
-  const outerRef = {
-    Chatsubo: "chatsubo",
-    Cyberspace: "cyberspace",
-    Gemeinschaft: "gemeinschaft",
-    "Crazy Edo": "crazyEdo",
-    Microsofts: "microsofts",
-    "Cheap Hotel": "cheapHotel",
-    "Julius Deane": "juliusDeane",
-    "Donut World": "donutWorld",
-    Lawbot: "lawbot",
-    database: "database",
-    Shiva: "shiva",
-    Freeside: "freeside",
-    softwarez: "softwarez",
-    Matrix: "matrix",
-    "Matt Shaw": "mattShaw",
-    "Night City News": "nightCityNews",
-  };
   const outerWheel = [
     "Chatsubo",
     "Cyberspace",
@@ -201,6 +183,42 @@ function App() {
     "",
     "",
   ];
+  const titleWheel = [
+    "",
+    "",
+    "",
+    "NEUROMANCER",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+  ];
+  const subtitleWheel = [
+    "",
+    "",
+    "",
+    "PAX Verification Code Wheel",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+  ];
 
   const [outer, setOuter] = useState(outerWheel);
   const [inner, setInner] = useState(innerWheel);
@@ -212,6 +230,8 @@ function App() {
   const [layerSix, setLayerSix] = useState(layerSixWheel);
   const [layerSeven, setLayerSeven] = useState(layerSevenWheel);
   const [layerEight, setLayerEight] = useState(layerEightWheel);
+  const [title, setTitle] = useState(titleWheel);
+  const [subtitle, setSubtitle] = useState(subtitleWheel);
 
   function updateValues(inner, outer) {
     const outsideValueCyberdeck = outer[inner.indexOf("Cyberdeck")];
@@ -274,10 +294,15 @@ function App() {
 
   function innerWheelShift(position) {
     const topPosition = 16 - inner.indexOf("Cyberdeck");
-    const mod = inner.splice(0, position);
-    updateValues(inner.concat(...mod), outer);
+    const innerMod = inner.splice(0, position);
+    updateValues(inner.concat(...innerMod), outer);
     console.log(outer);
-    setInner(inner.concat(...mod));
+    setInner(inner.concat(...innerMod));
+
+    const titleMod = title.splice(0, position);
+    setTitle(title.concat(...titleMod));
+    const subtitleMod = subtitle.splice(0, position);
+    setSubtitle(subtitle.concat(...subtitleMod));
 
     let dataOne = [
       "",
@@ -524,6 +549,12 @@ function App() {
               <div key={index} className={"layer-eight-" + index}>
                 {item}
               </div>
+            ))}
+            {title.map((item, index) => (
+              <h2 className={"title-" + index}>{item}</h2>
+            ))}
+            {subtitle.map((item, index) => (
+              <h3 className={"subtitle-" + index}>{item}</h3>
             ))}
             <div id="ring-wheel"></div>
           </div>

@@ -321,4 +321,23 @@ const wheelData = {
   "Night City News": nightCityNews,
 };
 
+const outerRef = {
+  Chatsubo: "chatsubo",
+  Cyberspace: "cyberspace",
+  Gemeinschaft: "gemeinschaft",
+  "Crazy Edo": "crazyEdo",
+  Microsofts: "microsofts",
+  "Cheap Hotel": "cheapHotel",
+  "Julius Deane": "juliusDeane",
+  "Donut World": "donutWorld",
+  Lawbot: "lawbot",
+  database: "database",
+  Shiva: "shiva",
+  Freeside: "freeside",
+  softwarez: "softwarez",
+  Matrix: "matrix",
+  "Matt Shaw": "mattShaw",
+  "Night City News": "nightCityNews",
+};
+
 export default wheelData;

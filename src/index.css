@@ -1220,15 +1220,6 @@
   transform: rotate(337.5deg) translateY(-10vh);
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
   margin: 0;
   display: flex;
@@ -1236,40 +1227,230 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.title-0 {
+  position: absolute;
+  font-size: 2.5em;
+  left: calc(50% - 8vh);
+  top: calc(50% - 5vh);
+  transform: rotate(11.25deg) translateY(-18vh);
+}
+.title-1 {
+  position: absolute;
+  font-size: 2.5em;
+  left: calc(50% - 8vh);
+  top: calc(50% - 5vh);
+  transform: rotate(33.75deg) translateY(-18vh);
+}
+.title-2 {
+  position: absolute;
+  font-size: 2.5em;
+  left: calc(50% - 8vh);
+  top: calc(50% - 5vh);
+  transform: rotate(56.25deg) translateY(-18vh);
+}
+.title-3 {
+  position: absolute;
+  font-size: 2.5em;
+  left: calc(50% - 8vh);
+  top: calc(50% - 5vh);
+  transform: rotate(78.75deg) translateY(-18vh);
+}
+.title-4 {
+  position: absolute;
+  font-size: 2.5em;
+  left: calc(50% - 8vh);
+  top: calc(50% - 5vh);
+  transform: rotate(101.25deg) translateY(-18vh);
+}
+.title-5 {
+  position: absolute;
+  font-size: 2.5em;
+  left: calc(50% - 8vh);
+  top: calc(50% - 5vh);
+  transform: rotate(123.75deg) translateY(-18vh);
+}
+.title-6 {
+  position: absolute;
+  font-size: 2.5em;
+  left: calc(50% - 8vh);
+  top: calc(50% - 5vh);
+  transform: rotate(146.25deg) translateY(-18vh);
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+.title-7 {
+  position: absolute;
+  font-size: 2.5em;
+  left: calc(50% - 8vh);
+  top: calc(50% - 5vh);
+  transform: rotate(168.75deg) translateY(-18vh);
 }
-button:hover {
-  border-color: #646cff;
+.title-8 {
+  position: absolute;
+  font-size: 2.5em;
+  left: calc(50% - 8vh);
+  top: calc(50% - 5vh);
+  transform: rotate(191.25deg) translateY(-18vh);
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.title-9 {
+  position: absolute;
+  font-size: 2.5em;
+  left: calc(50% - 8vh);
+  top: calc(50% - 5vh);
+  transform: rotate(213.75deg) translateY(-18vh);
+}
+.title-10 {
+  position: absolute;
+  font-size: 2.5em;
+  left: calc(50% - 8vh);
+  top: calc(50% - 5vh);
+  transform: rotate(236.25deg) translateY(-18vh);
+}
+.title-11 {
+  position: absolute;
+  font-size: 2.5em;
+  left: calc(50% - 8vh);
+  top: calc(50% - 5vh);
+  transform: rotate(258.75deg) translateY(-18vh);
+}
+.title-12 {
+  position: absolute;
+  font-size: 2.5em;
+  left: calc(50% - 8vh);
+  top: calc(50% - 5vh);
+  transform: rotate(281.25deg) translateY(-18vh);
+}
+.title-13 {
+  position: absolute;
+  font-size: 2.5em;
+  left: calc(50% - 8vh);
+  top: calc(50% - 5vh);
+  transform: rotate(303.75deg) translateY(-18vh);
+}
+.title-14 {
+  position: absolute;
+  font-size: 2.5em;
+  left: calc(50% - 8vh);
+  top: calc(50% - 5vh);
+  transform: rotate(326.25deg) translateY(-18vh);
+}
+.title-15 {
+  position: absolute;
+  font-size: 2.5em;
+  left: calc(50% - 8vh);
+  top: calc(50% - 5vh);
+  transform: rotate(348.75deg) translateY(-18vh);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.subtitle-0 {
+  position: absolute;
+  font-size: 1.8em;
+  left: calc(50% - 8vh);
+  top: calc(50% - 5vh);
+  transform: rotate(11.25deg) translateY(-10vh);
+}
+.subtitle-1 {
+  position: absolute;
+  font-size: 1.8em;
+  left: calc(50% - 8vh);
+  top: calc(50% - 5vh);
+  transform: rotate(33.75deg) translateY(-10vh);
+}
+.subtitle-2 {
+  position: absolute;
+  font-size: 1.8em;
+  left: calc(50% - 8vh);
+  top: calc(50% - 5vh);
+  transform: rotate(56.25deg) translateY(-10vh);
+}
+.subtitle-3 {
+  position: absolute;
+  font-size: 1.8em;
+  left: calc(50% - 8vh);
+  top: calc(50% - 5vh);
+  transform: rotate(78.75deg) translateY(-10vh);
+}
+.subtitle-4 {
+  position: absolute;
+  font-size: 1.8em;
+  left: calc(50% - 8vh);
+  top: calc(50% - 5vh);
+  transform: rotate(101.25deg) translateY(-10vh);
+}
+.subtitle-5 {
+  position: absolute;
+  font-size: 1.8em;
+  left: calc(50% - 8vh);
+  top: calc(50% - 5vh);
+  transform: rotate(123.75deg) translateY(-10vh);
+}
+.subtitle-6 {
+  position: absolute;
+  font-size: 1.8em;
+  left: calc(50% - 8vh);
+  top: calc(50% - 5vh);
+  transform: rotate(146.25deg) translateY(-10vh);
+}
+
+.subtitle-7 {
+  position: absolute;
+  font-size: 1.8em;
+  left: calc(50% - 8vh);
+  top: calc(50% - 5vh);
+  transform: rotate(168.75deg) translateY(-10vh);
+}
+.subtitle-8 {
+  position: absolute;
+  font-size: 1.8em;
+  left: calc(50% - 8vh);
+  top: calc(50% - 5vh);
+  transform: rotate(191.25deg) translateY(-10vh);
+}
+.subtitle-9 {
+  position: absolute;
+  font-size: 1.8em;
+  left: calc(50% - 8vh);
+  top: calc(50% - 5vh);
+  transform: rotate(213.75deg) translateY(-10vh);
+}
+.subtitle-10 {
+  position: absolute;
+  font-size: 1.8em;
+  left: calc(50% - 8vh);
+  top: calc(50% - 5vh);
+  transform: rotate(236.25deg) translateY(-10vh);
+}
+.subtitle-11 {
+  position: absolute;
+  font-size: 1.8em;
+  left: calc(50% - 8vh);
+  top: calc(50% - 5vh);
+  transform: rotate(258.75deg) translateY(-10vh);
+}
+.subtitle-12 {
+  position: absolute;
+  font-size: 1.8em;
+  left: calc(50% - 8vh);
+  top: calc(50% - 5vh);
+  transform: rotate(281.25deg) translateY(-10vh);
+}
+.subtitle-13 {
+  position: absolute;
+  font-size: 1.8em;
+  left: calc(50% - 8vh);
+  top: calc(50% - 5vh);
+  transform: rotate(303.75deg) translateY(-10vh);
+}
+.subtitle-14 {
+  position: absolute;
+  font-size: 1.8em;
+  left: calc(50% - 8vh);
+  top: calc(50% - 5vh);
+  transform: rotate(326.25deg) translateY(-10vh);
+}
+.subtitle-15 {
+  position: absolute;
+  font-size: 1.8em;
+  left: calc(50% - 8vh);
+  top: calc(50% - 5vh);
+  transform: rotate(348.75deg) translateY(-10vh);
 }

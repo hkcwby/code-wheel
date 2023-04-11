@@ -1,26 +1,13 @@
 import { useState, useEffect } from "react";
 import "./App.css";
-import wheelData from "./assets/wheelData";
+import { wheelData, outerWheel } from "./assets/wheelData";
 
 function App() {
-  const outerWheel = [
-    "Chatsubo",
-    "Cyberspace",
-    "Gemeinschaft",
-    "Crazy Edo",
-    "Microsofts",
-    "Cheap Hotel",
-    "Julius Deane",
-    "Donut World",
-    "Lawbot",
-    "database",
-    "Shiva",
-    "Freeside",
-    "softwarez",
-    "Matrix",
-    "Matt Shaw",
-    "Night City News",
-  ];
+  //our outer wheel options are imported from the datasets stored in the assets folder
+  /* our inner wheel data are the keys from our wheelData object stored in the assets folder; 
+  we use Chatsubo's keys but each of the options has identical keys representing the inner wheel*/
+  const innerWheel = Object.keys(wheelData.Chatsubo);
+  // defining the variables that change dependent on wheel positions and start values
   let asanoComputing = "061254";
   let spacedock = "031770";
   let spaceColony = "054127";
@@ -38,7 +25,8 @@ function App() {
   let hitachiBiotech = "672";
   let compuJudge = "054";
 
-  const innerWheel = Object.keys(wheelData.Chatsubo);
+  /*setting up each layer of the wheel based upon a start position of "Chatsubo":"Cyberdeck"
+   at the 12 O'clock position*/
   const layerOneWheel = [
     "",
     "",
@@ -183,6 +171,7 @@ function App() {
     "",
     "",
   ];
+  //the position of the title and subtitles default positions
   const titleWheel = [
     "",
     "",
@@ -219,7 +208,7 @@ function App() {
     "",
     "",
   ];
-
+  //creating react state management for each of these data positions above
   const [outer, setOuter] = useState(outerWheel);
   const [inner, setInner] = useState(innerWheel);
   const [layerOne, setLayerOne] = useState(layerOneWheel);
@@ -233,12 +222,15 @@ function App() {
   const [title, setTitle] = useState(titleWheel);
   const [subtitle, setSubtitle] = useState(subtitleWheel);
 
+  //a function to update the various data values that appear on the wheel
   function updateValues(inner, outer) {
+    //check the corresponding outside value that matches the inner value
     const outsideValueCyberdeck = outer[inner.indexOf("Cyberdeck")];
+    //the data is nested objects outer value: innervalue : known parameters
     ai = wheelData[outsideValueCyberdeck]["Cyberdeck"]["AI"];
     fujiElectric =
       wheelData[outsideValueCyberdeck]["Cyberdeck"]["Fuji Electric"];
-
+    //repeat the process for each relevant inside value and its corresponding outside value
     const outsideValueRatz = outer[inner.indexOf("Ratz")];
     zionCluster = wheelData[outsideValueRatz]["Ratz"]["Zion Cluster"];
     chibaCity = wheelData[outsideValueRatz]["Ratz"]["Chiba City"];
@@ -280,10 +272,6 @@ function App() {
     flatline = wheelData[outsideValueJusticeBooth]["Justice Booth"]["flatline"];
   }
 
-  useEffect(() => {
-    innerWheelShift(0);
-  }, [outer]);
-
   function outerWheelShift(position) {
     let data = [...outer];
     const mod = data.splice(0, position);
@@ -296,11 +284,11 @@ function App() {
     const topPosition = 16 - inner.indexOf("Cyberdeck");
     const innerMod = inner.splice(0, position);
     updateValues(inner.concat(...innerMod), outer);
-    console.log(outer);
     setInner(inner.concat(...innerMod));
 
     const titleMod = title.splice(0, position);
     setTitle(title.concat(...titleMod));
+
     const subtitleMod = subtitle.splice(0, position);
     setSubtitle(subtitle.concat(...subtitleMod));
 
@@ -324,11 +312,11 @@ function App() {
     ];
 
     let modOne = dataOne.splice(0, topPosition);
-
     dataOne = dataOne.concat(modOne);
     modOne = dataOne.splice(0, position);
     dataOne = dataOne.concat(modOne);
     setLayerOne([...dataOne]);
+
     let dataTwo = [
       "",
       "",
@@ -484,6 +472,10 @@ function App() {
     modEight = dataEight.splice(0, position);
     setLayerEight(dataEight.concat(modEight));
   }
+
+  useEffect(() => {
+    innerWheelShift(0);
+  }, [outer]);
 
   return (
     <div className="App">

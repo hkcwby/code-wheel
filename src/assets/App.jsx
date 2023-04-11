@@ -1,62 +1,32 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
-import wheelData from "./assets/wheelData";
+import { wheelData, outerWheel } from "./assets/wheelData";
 
 function App() {
-  const outerRef = {
-    Chatsubo: "chatsubo",
-    Cyberspace: "cyberspace",
-    Gemeinschaft: "gemeinschaft",
-    "Crazy Edo": "crazyEdo",
-    Microsofts: "microsofts",
-    "Cheap Hotel": "cheapHotel",
-    "Julius Deane": "juliusDeane",
-    "Donut World": "donutWorld",
-    Lawbot: "lawbot",
-    database: "database",
-    Shiva: "shiva",
-    Freeside: "freeside",
-    softwarez: "softwarez",
-    Matrix: "matrix",
-    "Matt Shaw": "mattShaw",
-    "Night City News": "nightCityNews",
-  };
-  const outerWheel = [
-    "Chatsubo",
-    "Cyberspace",
-    "Gemeinschaft",
-    "Crazy Edo",
-    "Microsofts",
-    "Cheap Hotel",
-    "Julius Deane",
-    "Donut World",
-    "Lawbot",
-    "database",
-    "Shiva",
-    "Freeside",
-    "softwarez",
-    "Matrix",
-    "Matt Shaw",
-    "Night City News",
-  ];
-  const [asanoComputing, setAsanoComputing] = useState("061254");
-  const [spacedock, setSpacedock] = useState("031770");
-  const [spaceColony, setSpaceColony] = useState("054127");
-  const [flatline, setFlatline] = useState("132077");
-  const [ai, setAi] = useState("71226");
-  const [zionCluster, setZionCluster] = useState("43267");
-  const [marcusGarvey, setMarcusGarvey] = useState("45771");
-  const [cryptology, setCryptology] = useState("67237");
-  const [chibaCity, setChibaCity] = useState("3347");
-  const [bankOfBerne, setBankOfBerne] = useState("5165");
-  const [bankOfZurich, setBankOfZurich] = useState("1053");
-  const [fujiElectric, setFujiElectric] = useState("6124");
-  const [holyJoystick, setHolyJoystick] = useState("333");
-  const [onoSendai, setOnoSendai] = useState("725");
-  const [hitachiBiotech, setHitachiBiotech] = useState("672");
-  const [compuJudge, setCompuJudge] = useState("054");
-
+  //our outer wheel options are imported from the datasets stored in the assets folder
+  /* our inner wheel data are the keys from our wheelData object stored in the assets folder; 
+  we use Chatsubo's keys but each of the options has identical keys representing the inner wheel*/
   const innerWheel = Object.keys(wheelData.Chatsubo);
+  // defining the variables that change dependent on wheel positions and start values
+  let asanoComputing = "061254";
+  let spacedock = "031770";
+  let spaceColony = "054127";
+  let flatline = "132077";
+  let ai = "71226";
+  let zionCluster = "43267";
+  let marcusGarvey = "45771";
+  let cryptology = "67237";
+  let chibaCity = "3347";
+  let bankOfBerne = "5165";
+  let bankOfZurich = "1053";
+  let fujiElectric = "6124";
+  let holyJoystick = "333";
+  let onoSendai = "725";
+  let hitachiBiotech = "672";
+  let compuJudge = "054";
+
+  /*setting up each layer of the wheel based upon a start position of "Chatsubo":"Cyberdeck"
+   at the 12 O'clock position*/
   const layerOneWheel = [
     "",
     "",
@@ -201,7 +171,44 @@ function App() {
     "",
     "",
   ];
-
+  //the position of the title and subtitles default positions
+  const titleWheel = [
+    "",
+    "",
+    "",
+    "NEUROMANCER",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+  ];
+  const subtitleWheel = [
+    "",
+    "",
+    "",
+    "PAX Verification Code Wheel",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+  ];
+  //creating react state management for each of these data positions above
   const [outer, setOuter] = useState(outerWheel);
   const [inner, setInner] = useState(innerWheel);
   const [layerOne, setLayerOne] = useState(layerOneWheel);
@@ -212,85 +219,263 @@ function App() {
   const [layerSix, setLayerSix] = useState(layerSixWheel);
   const [layerSeven, setLayerSeven] = useState(layerSevenWheel);
   const [layerEight, setLayerEight] = useState(layerEightWheel);
+  const [title, setTitle] = useState(titleWheel);
+  const [subtitle, setSubtitle] = useState(subtitleWheel);
 
+  //a function to update the various data values that appear on the wheel
   function updateValues(inner, outer) {
-    const data = wheelData;
-
+    //check the corresponding outside value that matches the inner value
     const outsideValueCyberdeck = outer[inner.indexOf("Cyberdeck")];
-    setAi(data[outsideValueCyberdeck]["Cyberdeck"]["AI"]);
-    setFujiElectric(data[outsideValueCyberdeck]["Cyberdeck"]["Fuji Electric"]);
-
+    //the data is nested objects outer value: innervalue : known parameters
+    ai = wheelData[outsideValueCyberdeck]["Cyberdeck"]["AI"];
+    fujiElectric =
+      wheelData[outsideValueCyberdeck]["Cyberdeck"]["Fuji Electric"];
+    //repeat the process for each relevant inside value and its corresponding outside value
     const outsideValueRatz = outer[inner.indexOf("Ratz")];
-    setZionCluster(data[outsideValueRatz]["Ratz"]["Zion Cluster"]);
-    setChibaCity(data[outsideValueRatz]["Ratz"]["Chiba City"]);
+    zionCluster = wheelData[outsideValueRatz]["Ratz"]["Zion Cluster"];
+    chibaCity = wheelData[outsideValueRatz]["Ratz"]["Chiba City"];
 
     const outsideValueHolografix = outer[inner.indexOf("Holografix")];
-    setAsanoComputing(
-      data[outsideValueHolografix]["Holografix"]["Asano Computing"]
-    );
-    setHitachiBiotech(
-      data[outsideValueHolografix]["Holografix"]["Hitachi Biotech"]
-    );
+    asanoComputing =
+      wheelData[outsideValueHolografix]["Holografix"]["Asano Computing"];
+    hitachiBiotech =
+      wheelData[outsideValueHolografix]["Holografix"]["Hitachi Biotech"];
 
     const outsideValueLarryMoe = outer[inner.indexOf("Larry Moe")];
-    setCryptology(data[outsideValueLarryMoe]["Larry Moe"]["Cryptology"]);
+    cryptology = wheelData[outsideValueLarryMoe]["Larry Moe"]["Cryptology"];
 
     const outsideValuePAX = outer[inner.indexOf("PAX")];
-    setSpaceColony(data[outsideValuePAX]["PAX"]["Space colony"]);
-    setHolyJoystick(data[outsideValuePAX]["PAX"]["Holy Joystick"]);
+    spaceColony = wheelData[outsideValuePAX]["PAX"]["Space colony"];
+    holyJoystick = wheelData[outsideValuePAX]["PAX"]["Holy Joystick"];
 
     const outsideValueSkillChips = outer[inner.indexOf("Skill chips")];
-    setBankOfBerne(
-      data[outsideValueSkillChips]["Skill chips"]["Bank of Berne"]
-    );
+    bankOfBerne =
+      wheelData[outsideValueSkillChips]["Skill chips"]["Bank of Berne"];
 
     const outsideValueShinsPawn = outer[inner.indexOf("Shin's Pawn")];
-    setSpacedock(data[outsideValueShinsPawn]["Shin's Pawn"]["Spacedock"]);
-    setOnoSendai(data[outsideValueShinsPawn]["Shin's Pawn"]["Ono-Sendai"]);
+    spacedock = wheelData[outsideValueShinsPawn]["Shin's Pawn"]["Spacedock"];
+    onoSendai = wheelData[outsideValueShinsPawn]["Shin's Pawn"]["Ono-Sendai"];
 
     const outsideValueGentlemanLoser = outer[inner.indexOf("Gentleman Loser")];
-    setMarcusGarvey(
-      data[outsideValueGentlemanLoser]["Gentleman Loser"]["Marcus Garvey"]
-    );
-    setBankOfZurich(
-      data[outsideValueGentlemanLoser]["Gentleman Loser"]["Bank of Zurich"]
-    );
+    marcusGarvey =
+      wheelData[outsideValueGentlemanLoser]["Gentleman Loser"]["Marcus Garvey"];
+    bankOfZurich =
+      wheelData[outsideValueGentlemanLoser]["Gentleman Loser"][
+        "Bank of Zurich"
+      ];
 
     const outsideValueMaasBiolabs = outer[inner.indexOf("Maas Biolabs")];
-    setCompuJudge(data[outsideValueMaasBiolabs]["Maas Biolabs"]["Compu-judge"]);
+    compuJudge =
+      wheelData[outsideValueMaasBiolabs]["Maas Biolabs"]["Compu-judge"];
 
     const outsideValueJusticeBooth = outer[inner.indexOf("Justice Booth")];
-    setFlatline(data[outsideValueJusticeBooth]["Justice Booth"]["flatline"]);
+    flatline = wheelData[outsideValueJusticeBooth]["Justice Booth"]["flatline"];
   }
 
   function outerWheelShift(position) {
-    const mod = outer.splice(0, position);
+    let data = [...outer];
+    const mod = data.splice(0, position);
     updateValues(inner, outer.concat(...mod));
-    setOuter(outer.concat(...mod));
-    updateValues(inner, outer);
+    data = data.concat(mod);
+    setOuter(data);
   }
 
   function innerWheelShift(position) {
-    const mod = inner.splice(0, position);
-    updateValues(inner.concat(...mod), outer);
-    setInner(inner.concat(...mod));
-    const modOne = layerOne.splice(0, position);
-    setLayerOne([...layerOne].concat(...modOne));
-    const modTwo = layerTwo.splice(0, position);
-    setLayerTwo(layerTwo.concat(...modTwo));
-    const modThree = layerThree.splice(0, position);
-    setLayerThree(layerThree.concat(...modThree));
-    const modFour = layerFour.splice(0, position);
-    setLayerFour(layerFour.concat(...modFour));
-    const modFive = layerFive.splice(0, position);
-    setLayerFive(layerFive.concat(...modFive));
-    const modSix = layerSix.splice(0, position);
-    setLayerSix(layerSix.concat(...modSix));
-    const modSeven = layerSeven.splice(0, position);
-    setLayerSeven(layerSeven.concat(...modSeven));
-    const modEight = layerEight.splice(0, position);
-    setLayerEight(layerEight.concat(...modEight));
+    const innerMod = inner.splice(0, position);
+    updateValues(inner.concat(...innerMod), outer);
+    setInner(inner.concat(...innerMod));
+
+    const titleMod = title.splice(0, position);
+    setTitle(title.concat(...titleMod));
+
+    const subtitleMod = subtitle.splice(0, position);
+    setSubtitle(subtitle.concat(...subtitleMod));
+
+    const topPosition = 16 - inner.indexOf("Cyberdeck");
+    let dataOne = [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      asanoComputing,
+      "",
+      "Space Colony",
+      "",
+      spacedock,
+      "",
+      "",
+      "flatline",
+    ];
+
+    let modOne = dataOne.splice(0, topPosition);
+    dataOne = dataOne.concat(modOne);
+    modOne = dataOne.splice(0, position);
+    dataOne = dataOne.concat(modOne);
+    setLayerOne([...dataOne]);
+
+    let dataTwo = [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "ZionCluster",
+      "Asano Computing",
+      "",
+      spaceColony,
+      "",
+      "Spacedock",
+      "Marcus Garvey",
+      "",
+      flatline,
+    ];
+    let modTwo = dataTwo.splice(0, topPosition);
+    dataTwo = dataTwo.concat(modTwo);
+    modTwo = dataTwo.splice(0, position);
+    setLayerTwo(dataTwo.concat(modTwo));
+    let dataThree = [
+      "AI",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      zionCluster,
+      "",
+      "Cryptology",
+      "",
+      "",
+      "",
+      marcusGarvey,
+      "",
+      "",
+    ];
+    let modThree = dataThree.splice(0, topPosition);
+    dataThree = dataThree.concat(modThree);
+    modThree = dataThree.splice(0, position);
+    setLayerThree(dataThree.concat(modThree));
+    let dataFour = [
+      ai,
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      cryptology,
+      "",
+      "Bank of Berne",
+      "",
+      "",
+      "",
+      "",
+    ];
+    let modFour = dataFour.splice(0, topPosition);
+    dataFour = dataFour.concat(modFour);
+    modFour = dataFour.splice(0, position);
+    setLayerFour(dataFour.concat(modFour));
+    let dataFive = [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "Chiba City",
+      "",
+      "",
+      "",
+      bankOfBerne,
+      "",
+      bankOfZurich,
+      "",
+      "",
+    ];
+    let modFive = dataFive.splice(0, topPosition);
+    dataFive = dataFive.concat(modFive);
+    modFive = dataFive.splice(0, position);
+    setLayerFive(dataFive.concat(modFive));
+    let dataSix = [
+      fujiElectric,
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      chibaCity,
+      "",
+      "",
+      "Holy Joystick",
+      "",
+      "",
+      "Bank of Zurich",
+      "Compu-judge",
+      "",
+    ];
+    let modSix = dataSix.splice(0, topPosition);
+    dataSix = dataSix.concat(modSix);
+    modSix = dataSix.splice(0, position);
+    setLayerSix(dataSix.concat(modSix));
+    let dataSeven = [
+      "Fuji Electric",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "Hitachi Biotech",
+      "",
+      holyJoystick,
+      "",
+      "Ono-Sendai",
+      "",
+      compuJudge,
+      "",
+    ];
+    let modSeven = dataSeven.splice(0, topPosition);
+    dataSeven = dataSeven.concat(modSeven);
+    modSeven = dataSeven.splice(0, position);
+    setLayerSeven(dataSeven.concat(modSeven));
+    let dataEight = [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      hitachiBiotech,
+      "",
+      "",
+      "",
+      onoSendai,
+      "",
+      "",
+      "",
+    ];
+    let modEight = dataEight.splice(0, topPosition);
+    dataEight = dataEight.concat(modEight);
+    modEight = dataEight.splice(0, position);
+    setLayerEight(dataEight.concat(modEight));
   }
+
+  useEffect(() => {
+    innerWheelShift(0);
+  }, [outer]);
 
   return (
     <div className="App">
@@ -356,6 +541,12 @@ function App() {
               <div key={index} className={"layer-eight-" + index}>
                 {item}
               </div>
+            ))}
+            {title.map((item, index) => (
+              <h2 className={"title-" + index}>{item}</h2>
+            ))}
+            {subtitle.map((item, index) => (
+              <h3 className={"subtitle-" + index}>{item}</h3>
             ))}
             <div id="ring-wheel"></div>
           </div>

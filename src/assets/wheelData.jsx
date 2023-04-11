@@ -302,7 +302,7 @@ const nightCityNews = {
   "Justice Booth": { flatline: 132077 },
 };
 
-const wheelData = {
+export const wheelData = {
   Chatsubo: chatsubo,
   Cyberspace: cyberspace,
   Gemeinschaft: gemeinschaft,
@@ -321,7 +321,7 @@ const wheelData = {
   "Night City News": nightCityNews,
 };
 
-const outerRef = {
+export const outerRef = {
   Chatsubo: "chatsubo",
   Cyberspace: "cyberspace",
   Gemeinschaft: "gemeinschaft",
@@ -339,5 +339,24 @@ const outerRef = {
   "Matt Shaw": "mattShaw",
   "Night City News": "nightCityNews",
 };
+
+export const outerWheel = [
+  "Chatsubo",
+  "Cyberspace",
+  "Gemeinschaft",
+  "Crazy Edo",
+  "Microsofts",
+  "Cheap Hotel",
+  "Julius Deane",
+  "Donut World",
+  "Lawbot",
+  "database",
+  "Shiva",
+  "Freeside",
+  "softwarez",
+  "Matrix",
+  "Matt Shaw",
+  "Night City News",
+];
 
 export default wheelData;

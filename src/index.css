@@ -1230,22 +1230,22 @@ body {
 .title-0 {
   position: absolute;
   font-size: 2.5em;
-  left: calc(50% - 8vh);
-  top: calc(50% - 5vh);
+  left: calc(50% - 14vh);
+  top: calc(50% - 10vh);
   transform: rotate(11.25deg) translateY(-18vh);
 }
 .title-1 {
   position: absolute;
   font-size: 2.5em;
-  left: calc(50% - 8vh);
-  top: calc(50% - 5vh);
+  left: calc(50% - 12vh);
+  top: calc(50% - 10vh);
   transform: rotate(33.75deg) translateY(-18vh);
 }
 .title-2 {
   position: absolute;
   font-size: 2.5em;
-  left: calc(50% - 8vh);
-  top: calc(50% - 5vh);
+  left: calc(50% - 10vh);
+  top: calc(50% - 8vh);
   transform: rotate(56.25deg) translateY(-18vh);
 }
 .title-3 {
@@ -1259,107 +1259,107 @@ body {
   position: absolute;
   font-size: 2.5em;
   left: calc(50% - 8vh);
-  top: calc(50% - 5vh);
+  top: calc(50% - 2vh);
   transform: rotate(101.25deg) translateY(-18vh);
 }
 .title-5 {
   position: absolute;
   font-size: 2.5em;
-  left: calc(50% - 8vh);
-  top: calc(50% - 5vh);
+  left: calc(50% - 10vh);
+  top: calc(50% + 0vh);
   transform: rotate(123.75deg) translateY(-18vh);
 }
 .title-6 {
   position: absolute;
   font-size: 2.5em;
-  left: calc(50% - 8vh);
-  top: calc(50% - 5vh);
+  left: calc(50% - 10vh);
+  top: calc(50% + 0vh);
   transform: rotate(146.25deg) translateY(-18vh);
 }
 
 .title-7 {
   position: absolute;
   font-size: 2.5em;
-  left: calc(50% - 8vh);
-  top: calc(50% - 5vh);
+  left: calc(50% - 14vh);
+  top: calc(50% + 2vh);
   transform: rotate(168.75deg) translateY(-18vh);
 }
 .title-8 {
   position: absolute;
   font-size: 2.5em;
-  left: calc(50% - 8vh);
-  top: calc(50% - 5vh);
+  left: calc(50% - 16vh);
+  top: calc(50% + 2vh);
   transform: rotate(191.25deg) translateY(-18vh);
 }
 .title-9 {
   position: absolute;
   font-size: 2.5em;
-  left: calc(50% - 8vh);
-  top: calc(50% - 5vh);
+  left: calc(50% - 20vh);
+  top: calc(50% + 0vh);
   transform: rotate(213.75deg) translateY(-18vh);
 }
 .title-10 {
   position: absolute;
   font-size: 2.5em;
-  left: calc(50% - 8vh);
-  top: calc(50% - 5vh);
+  left: calc(50% - 22vh);
+  top: calc(50% - 3vh);
   transform: rotate(236.25deg) translateY(-18vh);
 }
 .title-11 {
   position: absolute;
   font-size: 2.5em;
-  left: calc(50% - 8vh);
+  left: calc(50% - 20vh);
   top: calc(50% - 5vh);
   transform: rotate(258.75deg) translateY(-18vh);
 }
 .title-12 {
   position: absolute;
   font-size: 2.5em;
-  left: calc(50% - 8vh);
-  top: calc(50% - 5vh);
+  left: calc(50% - 20vh);
+  top: calc(50% - 8vh);
   transform: rotate(281.25deg) translateY(-18vh);
 }
 .title-13 {
   position: absolute;
   font-size: 2.5em;
-  left: calc(50% - 8vh);
-  top: calc(50% - 5vh);
+  left: calc(50% - 18vh);
+  top: calc(50% - 10vh);
   transform: rotate(303.75deg) translateY(-18vh);
 }
 .title-14 {
   position: absolute;
   font-size: 2.5em;
-  left: calc(50% - 8vh);
-  top: calc(50% - 5vh);
+  left: calc(50% - 18vh);
+  top: calc(50% - 10vh);
   transform: rotate(326.25deg) translateY(-18vh);
 }
 .title-15 {
   position: absolute;
   font-size: 2.5em;
-  left: calc(50% - 8vh);
-  top: calc(50% - 5vh);
+  left: calc(50% - 16vh);
+  top: calc(50% - 10vh);
   transform: rotate(348.75deg) translateY(-18vh);
 }
 
 .subtitle-0 {
   position: absolute;
   font-size: 1.8em;
-  left: calc(50% - 8vh);
-  top: calc(50% - 5vh);
+  left: calc(50% - 17vh);
+  top: calc(50% - 12vh);
   transform: rotate(11.25deg) translateY(-10vh);
 }
 .subtitle-1 {
   position: absolute;
   font-size: 1.8em;
-  left: calc(50% - 8vh);
-  top: calc(50% - 5vh);
+  left: calc(50% - 14vh);
+  top: calc(50% - 12vh);
   transform: rotate(33.75deg) translateY(-10vh);
 }
 .subtitle-2 {
   position: absolute;
   font-size: 1.8em;
-  left: calc(50% - 8vh);
-  top: calc(50% - 5vh);
+  left: calc(50% - 12vh);
+  top: calc(50% - 8vh);
   transform: rotate(56.25deg) translateY(-10vh);
 }
 .subtitle-3 {
@@ -1373,84 +1373,84 @@ body {
   position: absolute;
   font-size: 1.8em;
   left: calc(50% - 8vh);
-  top: calc(50% - 5vh);
+  top: calc(50% + 0vh);
   transform: rotate(101.25deg) translateY(-10vh);
 }
 .subtitle-5 {
   position: absolute;
   font-size: 1.8em;
-  left: calc(50% - 8vh);
-  top: calc(50% - 5vh);
+  left: calc(50% - 10vh);
+  top: calc(50% + 3vh);
   transform: rotate(123.75deg) translateY(-10vh);
 }
 .subtitle-6 {
   position: absolute;
   font-size: 1.8em;
-  left: calc(50% - 8vh);
-  top: calc(50% - 5vh);
+  left: calc(50% - 11vh);
+  top: calc(50% + 5vh);
   transform: rotate(146.25deg) translateY(-10vh);
 }
 
 .subtitle-7 {
   position: absolute;
   font-size: 1.8em;
-  left: calc(50% - 8vh);
-  top: calc(50% - 5vh);
+  left: calc(50% - 17vh);
+  top: calc(50% + 7vh);
   transform: rotate(168.75deg) translateY(-10vh);
 }
 .subtitle-8 {
   position: absolute;
   font-size: 1.8em;
-  left: calc(50% - 8vh);
-  top: calc(50% - 5vh);
+  left: calc(50% - 20vh);
+  top: calc(50% + 7vh);
   transform: rotate(191.25deg) translateY(-10vh);
 }
 .subtitle-9 {
   position: absolute;
   font-size: 1.8em;
-  left: calc(50% - 8vh);
-  top: calc(50% - 5vh);
+  left: calc(50% - 26vh);
+  top: calc(50% + 4vh);
   transform: rotate(213.75deg) translateY(-10vh);
 }
 .subtitle-10 {
   position: absolute;
   font-size: 1.8em;
-  left: calc(50% - 8vh);
-  top: calc(50% - 5vh);
+  left: calc(50% - 28vh);
+  top: calc(50% - 0vh);
   transform: rotate(236.25deg) translateY(-10vh);
 }
 .subtitle-11 {
   position: absolute;
   font-size: 1.8em;
-  left: calc(50% - 8vh);
-  top: calc(50% - 5vh);
+  left: calc(50% - 26vh);
+  top: calc(50% - 3vh);
   transform: rotate(258.75deg) translateY(-10vh);
 }
 .subtitle-12 {
   position: absolute;
   font-size: 1.8em;
-  left: calc(50% - 8vh);
-  top: calc(50% - 5vh);
+  left: calc(50% - 26vh);
+  top: calc(50% - 7vh);
   transform: rotate(281.25deg) translateY(-10vh);
 }
 .subtitle-13 {
   position: absolute;
   font-size: 1.8em;
-  left: calc(50% - 8vh);
-  top: calc(50% - 5vh);
+  left: calc(50% - 24vh);
+  top: calc(50% - 10vh);
   transform: rotate(303.75deg) translateY(-10vh);
 }
 .subtitle-14 {
   position: absolute;
   font-size: 1.8em;
-  left: calc(50% - 8vh);
-  top: calc(50% - 5vh);
+  left: calc(50% - 24vh);
+  top: calc(50% - 10vh);
   transform: rotate(326.25deg) translateY(-10vh);
 }
 .subtitle-15 {
   position: absolute;
   font-size: 1.8em;
-  left: calc(50% - 8vh);
-  top: calc(50% - 5vh);
+  left: calc(50% - 20vh);
+  top: calc(50% - 12vh);
   transform: rotate(348.75deg) translateY(-10vh);
 }

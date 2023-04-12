@@ -7,24 +7,42 @@ function App() {
   /* our inner wheel data are the keys from our wheelData object stored in the assets folder; 
   we use Chatsubo's keys but each of the options has identical keys representing the inner wheel*/
   const innerWheel = Object.keys(wheelData.Chatsubo);
-  // defining the variables that change dependent on wheel positions and start values
-  let asanoComputing = "061254";
-  let spacedock = "031770";
-  let spaceColony = "054127";
-  let flatline = "132077";
-  let ai = "71226";
-  let zionCluster = "43267";
-  let marcusGarvey = "45771";
-  let cryptology = "67237";
-  let chibaCity = "3347";
-  let bankOfBerne = "5165";
-  let bankOfZurich = "1053";
-  let fujiElectric = "6124";
-  let holyJoystick = "333";
-  let onoSendai = "725";
-  let hitachiBiotech = "672";
-  let compuJudge = "054";
-
+  // defining the variables that change dependent on wheel positions and start their values
+  let [
+    asanoComputing,
+    spacedock,
+    spaceColony,
+    flatline,
+    ai,
+    zionCluster,
+    marcusGarvey,
+    cryptology,
+    chibaCity,
+    bankOfBerne,
+    bankOfZurich,
+    fujiElectric,
+    holyJoystick,
+    onoSendai,
+    hitachiBiotech,
+    compuJudge,
+  ] = [
+    "061254",
+    "031770",
+    "054127",
+    "132077",
+    "71226",
+    "43267",
+    "45771",
+    "67237",
+    "3347",
+    "5165",
+    "1053",
+    "6124",
+    "333",
+    "725",
+    "672",
+    "054",
+  ];
   /*setting up each layer of the wheel based upon a start position of "Chatsubo":"Cyberdeck"
    at the 12 O'clock position*/
   const layerOneWheel = [
@@ -271,26 +289,25 @@ function App() {
     const outsideValueJusticeBooth = outer[inner.indexOf("Justice Booth")];
     flatline = wheelData[outsideValueJusticeBooth]["Justice Booth"]["flatline"];
   }
-
-  function outerWheelShift(position) {
-    let data = [...outer];
-    const mod = data.splice(0, position);
-    updateValues(inner, outer.concat(...mod));
-    data = data.concat(mod);
-    setOuter(data);
-  }
-
+  //shifts the innerwheel positions and refreshes data values
   function innerWheelShift(position) {
+    //tracks the current position of the wheel tracking based on the location of the original top position
+    //this is used for the "layers" because we will be refreshing their data each time
     const topPosition = 16 - inner.indexOf("Cyberdeck");
+    //first step in modifying the inner wheel values positions
     const innerMod = inner.splice(0, position);
+    //update data based on the new inner and existing outer wheel positions
     updateValues(inner.concat(...innerMod), outer);
+    //set the new inner wheel positions for rendering
     setInner(inner.concat(...innerMod));
-
+    //update the title position and sub title positions in a similar way
     const titleMod = title.splice(0, position);
     setTitle(title.concat(...titleMod));
 
     const subtitleMod = subtitle.splice(0, position);
     setSubtitle(subtitle.concat(...subtitleMod));
+
+    //now refresh each of the eight wheel data layers with the updated variable values
 
     let dataOne = [
       "",
@@ -310,13 +327,15 @@ function App() {
       "",
       "flatline",
     ];
-
+    //since this data is in the order of the initial render we must first readjust using our stored variable
     let modOne = dataOne.splice(0, topPosition);
     dataOne = dataOne.concat(modOne);
+    //now adjust it to the new position based on the clicked position
     modOne = dataOne.splice(0, position);
     dataOne = dataOne.concat(modOne);
+    //assign the layer
     setLayerOne([...dataOne]);
-
+    //repeat the process for layers two through eight
     let dataTwo = [
       "",
       "",
@@ -472,7 +491,12 @@ function App() {
     modEight = dataEight.splice(0, position);
     setLayerEight(dataEight.concat(modEight));
   }
-
+  //shifts the outer wheel
+  function outerWheelShift(position) {
+    const mod = outer.splice(0, position);
+    setOuter(outer.concat(mod));
+  }
+  //a useEffect hook, rerun the innerWheel data calc (unmoved) when the outer wheel is updated
   useEffect(() => {
     innerWheelShift(0);
   }, [outer]);
@@ -543,10 +567,14 @@ function App() {
               </div>
             ))}
             {title.map((item, index) => (
-              <h2 className={"title-" + index}>{item}</h2>
+              <h2 key={index} className={"title-" + index}>
+                {item}
+              </h2>
             ))}
             {subtitle.map((item, index) => (
-              <h3 className={"subtitle-" + index}>{item}</h3>
+              <h3 key={index} className={"subtitle-" + index}>
+                {item}
+              </h3>
             ))}
             <div id="ring-wheel"></div>
           </div>

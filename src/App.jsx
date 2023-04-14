@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import { wheelData, outerWheel } from "./assets/wheelData";
+import svg from "./assets/Infobox.svg";
 
 function App() {
   //our outer wheel options are imported from the datasets stored in the assets folder
@@ -501,9 +502,27 @@ function App() {
     innerWheelShift(0);
   }, [outer]);
 
+  const [info, setInfo] = useState(true);
+  function infoToggle() {
+    setInfo(!info);
+  }
+
   return (
     <div className="App">
       <div id="background">
+        <div id="info-toggle">
+          {info ? (
+            <img src={svg} id="info" onClick={() => infoToggle()} />
+          ) : (
+            <div id="toggle-background">
+              <div id="toggle-outer-wheel" onClick={() => infoToggle()}>
+                <div id="toggle-inner-wheel">
+                  <div id="toggle-ring-wheel"></div>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
         <div id="outer-wheel">
           <div>
             {outer.map((item, index) => (

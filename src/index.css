@@ -105,6 +105,13 @@ inner wheel and the ring in the center */
 }
 /* each out position needs specific styling to transpose the values around the circlular center point */
 /* this is done for the outer wheel the inner wheel and each layer of data points */
+.title {
+  font-size: 2.5em;
+  rotate: 11.25deg;
+  width: 15vh;
+  left: calc(50% - 15vh);
+  transform-origin: rotate(11.25deg) translateY(-18vh);
+}
 .pos-0 {
   position: absolute;
   left: calc(50% - 8vh);
@@ -343,7 +350,7 @@ body {
   position: absolute;
   font-size: 2.5em;
   left: calc(50% - 20vh);
-  top: calc(50% - 10vh);
+  top: calc(50% - 8vh);
   transform: rotate(281.25deg) translateY(-18vh);
 }
 .title-13 {
@@ -457,7 +464,7 @@ body {
   position: absolute;
   font-size: 1.8em;
   left: calc(50% - 28vh);
-  top: calc(50% - 10vh);
+  top: calc(50% - 7vh);
   transform: rotate(281.25deg) translateY(-10vh);
 }
 .subtitle-13 {

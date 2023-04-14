@@ -84,8 +84,8 @@ inner wheel and the ring in the center */
 }
 
 #inner-wheel {
-  left: 7vh;
-  top: 7vh;
+  left: 7.5vh;
+  top: 7.5vh;
   border-radius: 50%;
   position: absolute;
   height: 75vh;
@@ -105,1165 +105,144 @@ inner wheel and the ring in the center */
 }
 /* each out position needs specific styling to transpose the values around the circlular center point */
 /* this is done for the outer wheel the inner wheel and each layer of data points */
-.outer-0 {
+.pos-0 {
   position: absolute;
-  width: 16vh;
   left: calc(50% - 8vh);
-  top: calc(50%);
+  top: calc(50% - 0.5vh);
+  rotate: 0deg;
+}
+.pos-1 {
+  position: absolute;
+  left: calc(50% - 8vh);
+  top: calc(50% - 0.5vh);
+  rotate: 22.5deg;
+}
+.pos-2 {
+  position: absolute;
+  left: calc(50% - 8vh);
+  top: calc(50% - 0.5vh);
+  rotate: 45deg;
+}
+.pos-3 {
+  position: absolute;
+  left: calc(50% - 8vh);
+  top: calc(50% - 0.5vh);
+  rotate: 67.5deg;
+}
+.pos-4 {
+  position: absolute;
+  left: calc(50% - 8vh);
+  top: calc(50% - 0.5vh);
+  rotate: 90deg;
+}
+.pos-5 {
+  position: absolute;
+  left: calc(50% - 8vh);
+  top: calc(50% - 0.5vh);
+  rotate: 112.5deg;
+}
+.pos-6 {
+  position: absolute;
+  left: calc(50% - 8vh);
+  top: calc(50% - 0.5vh);
+  rotate: 135deg;
+}
+.pos-7 {
+  position: absolute;
+  left: calc(50% - 8vh);
+  top: calc(50% - 0.5vh);
+  rotate: 157.5deg;
+}
+.pos-8 {
+  position: absolute;
+  left: calc(50% - 8vh);
+  top: calc(50% - 0.5vh);
+  rotate: 180deg;
+}
+.pos-9 {
+  position: absolute;
+  left: calc(50% - 8vh);
+  top: calc(50% - 0.5vh);
+  rotate: 202.5deg;
+}
+.pos-10 {
+  position: absolute;
+  left: calc(50% - 8vh);
+  top: calc(50% - 0.5vh);
+  rotate: 225deg;
+}
+.pos-11 {
+  position: absolute;
+  left: calc(50% - 8vh);
+  top: calc(50% - 0.5vh);
+  rotate: 247.5deg;
+}
+.pos-12 {
+  position: absolute;
+  left: calc(50% - 8vh);
+  top: calc(50% - 0.5vh);
+  rotate: 270deg;
+}
+.pos-13 {
+  position: absolute;
+  left: calc(50% - 8vh);
+  top: calc(50% - 0.5vh);
+  rotate: 292.5deg;
+}
+.pos-14 {
+  position: absolute;
+  left: calc(50% - 8vh);
+  top: calc(50% - 0.5vh);
+  rotate: 315deg;
+}
+.pos-15 {
+  position: absolute;
+  left: calc(50% - 8vh);
+  top: calc(50% - 0.5vh);
+  rotate: 337.5deg;
+}
+.outer {
+  width: 16vh;
   transform: translateY(-42vh);
 }
-.outer-1 {
-  position: absolute;
+.inner {
   width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(22.5deg) translateY(-42vh);
+  transform: translateY(-35vh);
 }
-.outer-2 {
-  position: absolute;
+.layer-one {
   width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(45deg) translateY(-42vh);
-}
-.outer-3 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(67.5deg) translateY(-42vh);
-}
-.outer-4 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(90deg) translateY(-42vh);
-}
-.outer-5 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(112.5deg) translateY(-41vh);
-}
-.outer-6 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(135deg) translateY(-41vh);
-}
-.outer-7 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(157.5deg) translateY(-41vh);
-}
-.outer-8 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(180deg) translateY(-41vh);
-}
-.outer-9 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(202.5deg) translateY(-41vh);
-}
-.outer-10 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(225deg) translateY(-41vh);
-}
-.outer-11 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(247.5deg) translateY(-41vh);
-}
-.outer-12 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(270deg) translateY(-42vh);
-}
-.outer-13 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(292.5deg) translateY(-42vh);
-}
-.outer-14 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(315deg) translateY(-42vh);
-}
-.outer-15 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(337.5deg) translateY(-42vh);
-}
-
-.inner-0 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: translateY(-36vh);
-}
-.inner-1 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(22.5deg) translateY(-36vh);
-}
-.inner-2 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(45deg) translateY(-36vh);
-}
-.inner-3 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(67.5deg) translateY(-36vh);
-}
-.inner-4 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(90deg) translateY(-36vh);
-}
-.inner-5 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(112.5deg) translateY(-35vh);
-}
-.inner-6 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(135deg) translateY(-35vh);
-}
-.inner-7 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(157.5deg) translateY(-35vh);
-}
-.inner-8 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(180deg) translateY(-35vh);
-}
-.inner-9 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(202.5deg) translateY(-35vh);
-}
-.inner-10 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(225deg) translateY(-35vh);
-}
-.inner-11 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(247.5deg) translateY(-35vh);
-}
-.inner-12 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(270deg) translateY(-36vh);
-}
-.inner-13 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(292.5deg) translateY(-36vh);
-}
-.inner-14 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(315deg) translateY(-36vh);
-}
-.inner-15 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(337.5deg) translateY(-36vh);
-}
-
-.layer-one-0 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
   transform: translateY(-33vh);
 }
-.layer-one-1 {
-  position: absolute;
+.layer-two {
   width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(22.5deg) translateY(-33vh);
-  /* border-top-style: solid; */
-}
-.layer-one-2 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(45deg) translateY(-33vh);
-}
-.layer-one-3 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(67.5deg) translateY(-33vh);
-}
-.layer-one-4 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(90deg) translateY(-33vh);
-}
-.layer-one-5 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(112.5deg) translateY(-32vh);
-}
-.layer-one-6 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(135deg) translateY(-32vh);
-}
-.layer-one-7 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(157.5deg) translateY(-32vh);
-}
-.layer-one-8 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(180deg) translateY(-32vh);
-}
-.layer-one-9 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(202.5deg) translateY(-32vh);
-}
-.layer-one-10 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(225deg) translateY(-32vh);
-}
-.layer-one-11 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(247.5deg) translateY(-32vh);
-}
-.layer-one-12 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(270deg) translateY(-32vh);
-}
-.layer-one-13 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(292.5deg) translateY(-33vh);
-}
-.layer-one-14 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(315deg) translateY(-33vh);
-}
-.layer-one-15 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(337.5deg) translateY(-33vh);
-  /* border-top-style: solid; */
-}
-
-.layer-two-0 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
   transform: translateY(-30vh);
 }
-.layer-two-1 {
-  position: absolute;
+.layer-three {
   width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(22.5deg) translateY(-30vh);
-}
-.layer-two-2 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(45deg) translateY(-30vh);
-}
-.layer-two-3 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(67.5deg) translateY(-30vh);
-}
-.layer-two-4 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(90deg) translateY(-30vh);
-}
-.layer-two-5 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(112.5deg) translateY(-29vh);
-}
-.layer-two-6 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(135deg) translateY(-29vh);
-}
-.layer-two-7 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(157.5deg) translateY(-29vh);
-}
-.layer-two-8 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(180deg) translateY(-29vh);
-}
-.layer-two-9 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(202.5deg) translateY(-29vh);
-}
-.layer-two-10 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(225deg) translateY(-29vh);
-}
-.layer-two-11 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(247.5deg) translateY(-29vh);
-}
-.layer-two-12 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(270deg) translateY(-29vh);
-}
-.layer-two-13 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(292.5deg) translateY(-30vh);
-}
-.layer-two-14 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(315deg) translateY(-30vh);
-}
-.layer-two-15 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(337.5deg) translateY(-30vh);
-}
-.layer-three-0 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
   transform: translateY(-27vh);
 }
-.layer-three-1 {
-  position: absolute;
+.layer-four {
   width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(22.5deg) translateY(-27vh);
-}
-.layer-three-2 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(45deg) translateY(-27vh);
-}
-.layer-three-3 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(67.5deg) translateY(-27vh);
-}
-.layer-three-4 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(90deg) translateY(-27vh);
-}
-.layer-three-5 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(112.5deg) translateY(-26vh);
-}
-.layer-three-6 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(135deg) translateY(-26vh);
-}
-.layer-three-7 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(157.5deg) translateY(-26vh);
-}
-.layer-three-8 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(180deg) translateY(-26vh);
-}
-.layer-three-9 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(202.5deg) translateY(-26vh);
-}
-.layer-three-10 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(225deg) translateY(-26vh);
-}
-.layer-three-11 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(247.5deg) translateY(-26vh);
-}
-.layer-three-12 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(270deg) translateY(-26vh);
-}
-.layer-three-13 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(292.5deg) translateY(-27vh);
-}
-.layer-three-14 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(315deg) translateY(-27vh);
-}
-.layer-three-15 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(337.5deg) translateY(-27vh);
-}
-.layer-four-0 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
   transform: translateY(-24vh);
 }
-.layer-four-1 {
-  position: absolute;
+.layer-five {
   width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(22.5deg) translateY(-24vh);
-}
-.layer-four-2 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(45deg) translateY(-24vh);
-}
-.layer-four-3 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(67.5deg) translateY(-24vh);
-}
-.layer-four-4 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(90deg) translateY(-24vh);
-}
-.layer-four-5 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(112.5deg) translateY(-23vh);
-}
-.layer-four-6 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(135deg) translateY(-23vh);
-}
-.layer-four-7 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(157.5deg) translateY(-23vh);
-}
-.layer-four-8 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(180deg) translateY(-23vh);
-}
-.layer-four-9 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(202.5deg) translateY(-23vh);
-}
-.layer-four-10 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(225deg) translateY(-23vh);
-}
-.layer-four-11 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(247.5deg) translateY(-23vh);
-}
-.layer-four-12 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(270deg) translateY(-23vh);
-}
-.layer-four-13 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(292.5deg) translateY(-24vh);
-}
-.layer-four-14 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(315deg) translateY(-24vh);
-}
-.layer-four-15 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(337.5deg) translateY(-24vh);
-}
-.layer-five-0 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
   transform: translateY(-21vh);
 }
-.layer-five-1 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(22.5deg) translateY(-21vh);
-}
-.layer-five-2 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(45deg) translateY(-21vh);
-}
-.layer-five-3 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(67.5deg) translateY(-21vh);
-}
-.layer-five-4 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(90deg) translateY(-21vh);
-}
-.layer-five-5 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(112.5deg) translateY(-20vh);
-}
-.layer-five-6 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(135deg) translateY(-20vh);
-}
-.layer-five-7 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(157.5deg) translateY(-20vh);
-}
-.layer-five-8 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(180deg) translateY(-20vh);
-}
-.layer-five-9 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(202.5deg) translateY(-20vh);
-}
-.layer-five-10 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(225deg) translateY(-20vh);
-}
-.layer-five-11 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(247.5deg) translateY(-20vh);
-}
-.layer-five-12 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(270deg) translateY(-20vh);
-}
-.layer-five-13 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(292.5deg) translateY(-21vh);
-}
-.layer-five-14 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(315deg) translateY(-21vh);
-}
-.layer-five-15 {
-  position: absolute;
-  width: 16vh;
-  left: calc(50% - 8vh);
-  top: calc(50%);
-  transform: rotate(337.5deg) translateY(-21vh);
-}
-
-.layer-six-0 {
-  position: absolute;
+.layer-six {
   width: 5.5vh;
-  overflow-wrap: break-word;
   left: calc(50% - 3vh);
-  top: calc(50%);
   transform: translateY(-18vh);
 }
-.layer-six-1 {
-  position: absolute;
+.layer-seven {
   width: 5.5vh;
-  overflow-wrap: break-word;
   left: calc(50% - 3vh);
-  top: calc(50%);
-  transform: rotate(22.5deg) translateY(-18vh);
-}
-.layer-six-2 {
-  position: absolute;
-  width: 5.5vh;
-  overflow-wrap: break-word;
-  left: calc(50% - 3vh);
-  top: calc(50%);
-  transform: rotate(45deg) translateY(-18vh);
-}
-.layer-six-3 {
-  position: absolute;
-  width: 5.5vh;
-  overflow-wrap: break-word;
-  left: calc(50% - 3vh);
-  top: calc(50%);
-  transform: rotate(67.5deg) translateY(-18vh);
-}
-.layer-six-4 {
-  position: absolute;
-  width: 5.5vh;
-  overflow-wrap: break-word;
-  left: calc(50% - 3vh);
-  top: calc(50%);
-  transform: rotate(90deg) translateY(-18vh);
-}
-.layer-six-5 {
-  position: absolute;
-  width: 5.5vh;
-  overflow-wrap: break-word;
-  left: calc(50% - 3vh);
-  top: calc(50%);
-  transform: rotate(112.5deg) translateY(-17vh);
-}
-.layer-six-6 {
-  position: absolute;
-  width: 5.5vh;
-  overflow-wrap: break-word;
-  left: calc(50% - 3vh);
-  top: calc(50%);
-  transform: rotate(135deg) translateY(-17vh);
-}
-.layer-six-7 {
-  position: absolute;
-  width: 5.5vh;
-  overflow-wrap: break-word;
-  left: calc(50% - 3vh);
-  top: calc(50%);
-  transform: rotate(157.5deg) translateY(-17vh);
-}
-.layer-six-8 {
-  position: absolute;
-  width: 5.5vh;
-  overflow-wrap: break-word;
-  left: calc(50% - 3vh);
-  top: calc(50%);
-  transform: rotate(180deg) translateY(-17vh);
-}
-.layer-six-9 {
-  position: absolute;
-  width: 5.5vh;
-  overflow-wrap: break-word;
-  left: calc(50% - 3vh);
-  top: calc(50%);
-  transform: rotate(202.5deg) translateY(-17vh);
-}
-.layer-six-10 {
-  position: absolute;
-  width: 5.5vh;
-  overflow-wrap: break-word;
-  left: calc(50% - 3vh);
-  top: calc(50%);
-  transform: rotate(225deg) translateY(-17vh);
-}
-.layer-six-11 {
-  position: absolute;
-  width: 5.5vh;
-  overflow-wrap: break-word;
-  left: calc(50% - 3vh);
-  top: calc(50%);
-  transform: rotate(247.5deg) translateY(-17vh);
-}
-.layer-six-12 {
-  position: absolute;
-  width: 5.5vh;
-  overflow-wrap: break-word;
-  left: calc(50% - 3vh);
-  top: calc(50%);
-  transform: rotate(270deg) translateY(-17vh);
-}
-.layer-six-13 {
-  position: absolute;
-  width: 5.5vh;
-  overflow-wrap: break-word;
-  left: calc(50% - 3vh);
-  top: calc(50%);
-  transform: rotate(292.5deg) translateY(-18vh);
-}
-.layer-six-14 {
-  position: absolute;
-  width: 5.5vh;
-  overflow-wrap: break-word;
-  left: calc(50% - 3vh);
-  top: calc(50%);
-  transform: rotate(315deg) translateY(-18vh);
-}
-.layer-six-15 {
-  position: absolute;
-  width: 5.5vh;
-  overflow-wrap: break-word;
-  left: calc(50% - 3vh);
-  top: calc(50%);
-  transform: rotate(337.5deg) translateY(-18vh);
-}
-
-.layer-seven-0 {
-  position: absolute;
-  width: 5.5vh;
-  overflow-wrap: break-word;
-  left: calc(50% - 3vh);
-  top: calc(50%);
   transform: translateY(-14vh);
 }
-.layer-seven-1 {
-  position: absolute;
-  width: 5.5vh;
-  overflow-wrap: break-word;
-  left: calc(50% - 3vh);
-  top: calc(50%);
-  transform: rotate(22.5deg) translateY(-14vh);
-}
-.layer-seven-2 {
-  position: absolute;
-  width: 5.5vh;
-  overflow-wrap: break-word;
-  left: calc(50% - 3vh);
-  top: calc(50%);
-  transform: rotate(45deg) translateY(-14vh);
-}
-.layer-seven-3 {
-  position: absolute;
-  width: 5.5vh;
-  overflow-wrap: break-word;
-  left: calc(50% - 3vh);
-  top: calc(50%);
-  transform: rotate(67.5deg) translateY(-14vh);
-}
-.layer-seven-4 {
-  position: absolute;
-  width: 5.5vh;
-  overflow-wrap: break-word;
-  left: calc(50% - 3vh);
-  top: calc(50%);
-  transform: rotate(90deg) translateY(-14vh);
-}
-.layer-seven-5 {
-  position: absolute;
-  width: 5.5vh;
-  overflow-wrap: break-word;
-  left: calc(50% - 3vh);
-  top: calc(50%);
-  transform: rotate(112.5deg) translateY(-13vh);
-}
-.layer-seven-6 {
-  position: absolute;
-  width: 5.5vh;
-  overflow-wrap: break-word;
-  left: calc(50% - 3vh);
-  top: calc(50%);
-  transform: rotate(135deg) translateY(-13vh);
-}
-.layer-seven-7 {
-  position: absolute;
-  width: 5.5vh;
-  overflow-wrap: break-word;
-  left: calc(50% - 3vh);
-  top: calc(50%);
-  transform: rotate(157.5deg) translateY(-13vh);
-}
-.layer-seven-8 {
-  position: absolute;
-  width: 5.5vh;
-  overflow-wrap: break-word;
-  left: calc(50% - 3vh);
-  top: calc(50%);
-  transform: rotate(180deg) translateY(-13vh);
-}
-.layer-seven-9 {
-  position: absolute;
-  width: 5.5vh;
-  overflow-wrap: break-word;
-  left: calc(50% - 3vh);
-  top: calc(50%);
-  transform: rotate(202.5deg) translateY(-13vh);
-}
-.layer-seven-10 {
-  position: absolute;
-  width: 5.5vh;
-  overflow-wrap: break-word;
-  left: calc(50% - 3vh);
-  top: calc(50%);
-  transform: rotate(225deg) translateY(-13vh);
-}
-.layer-seven-11 {
-  position: absolute;
-  width: 5.5vh;
-  overflow-wrap: break-word;
-  left: calc(50% - 3vh);
-  top: calc(50%);
-  transform: rotate(247.5deg) translateY(-13vh);
-}
-.layer-seven-12 {
-  position: absolute;
-  width: 5.5vh;
-  overflow-wrap: break-word;
-  left: calc(50% - 3vh);
-  top: calc(50%);
-  transform: rotate(270deg) translateY(-13vh);
-}
-.layer-seven-13 {
-  position: absolute;
-  width: 5.5vh;
-  overflow-wrap: break-word;
-  left: calc(50% - 3vh);
-  top: calc(50%);
-  transform: rotate(292.5deg) translateY(-14vh);
-}
-.layer-seven-14 {
-  position: absolute;
-  width: 5.5vh;
-  overflow-wrap: break-word;
-  left: calc(50% - 3vh);
-  top: calc(50%);
-  transform: rotate(315deg) translateY(-13vh);
-}
-.layer-seven-15 {
-  position: absolute;
-  width: 5.5vh;
-  overflow-wrap: break-word;
-  left: calc(50% - 3vh);
-  top: calc(50%);
-  transform: rotate(337.5deg) translateY(-14vh);
-}
-
-.layer-eight-0 {
-  position: absolute;
+.layer-eight {
   width: 5.5vh;
   left: calc(50% - 3vh);
-  top: calc(50%);
   transform: translateY(-10vh);
-}
-.layer-eight-1 {
-  position: absolute;
-  width: 5.5vh;
-  left: calc(50% - 3vh);
-  top: calc(50%);
-  transform: rotate(22.5deg) translateY(-10vh);
-}
-.layer-eight-2 {
-  position: absolute;
-  width: 5.5vh;
-  left: calc(50% - 3vh);
-  top: calc(50%);
-  transform: rotate(45deg) translateY(-10vh);
-}
-.layer-eight-3 {
-  position: absolute;
-  width: 5.5vh;
-  left: calc(50% - 3vh);
-  top: calc(50%);
-  transform: rotate(67.5deg) translateY(-10vh);
-}
-.layer-eight-4 {
-  position: absolute;
-  width: 5.5vh;
-  left: calc(50% - 3vh);
-  top: calc(50%);
-  transform: rotate(90deg) translateY(-10vh);
-}
-.layer-eight-5 {
-  position: absolute;
-  width: 5.5vh;
-  left: calc(50% - 3vh);
-  top: calc(50%);
-  transform: rotate(112.5deg) translateY(-9vh);
-}
-.layer-eight-6 {
-  position: absolute;
-  width: 5.5vh;
-  left: calc(50% - 3vh);
-  top: calc(50%);
-  transform: rotate(135deg) translateY(-9vh);
-}
-.layer-eight-7 {
-  position: absolute;
-  width: 5.5vh;
-  left: calc(50% - 3vh);
-  top: calc(50%);
-  transform: rotate(157.5deg) translateY(-9vh);
-}
-.layer-eight-8 {
-  position: absolute;
-  width: 5.5vh;
-  left: calc(50% - 3vh);
-  top: calc(50%);
-  transform: rotate(180deg) translateY(-9vh);
-}
-.layer-eight-9 {
-  position: absolute;
-  width: 5.5vh;
-  left: calc(50% - 3vh);
-  top: calc(50%);
-  transform: rotate(202.5deg) translateY(-9vh);
-}
-.layer-eight-10 {
-  position: absolute;
-  width: 5.5vh;
-  left: calc(50% - 3vh);
-  top: calc(50%);
-  transform: rotate(225deg) translateY(-9vh);
-}
-.layer-eight-11 {
-  position: absolute;
-  width: 5.5vh;
-  left: calc(50% - 3vh);
-  top: calc(50%);
-  transform: rotate(247.5deg) translateY(-9vh);
-}
-.layer-eight-12 {
-  position: absolute;
-  width: 5.5vh;
-  left: calc(50% - 3vh);
-  top: calc(50%);
-  transform: rotate(270deg) translateY(-9vh);
-}
-.layer-eight-13 {
-  position: absolute;
-  width: 5.5vh;
-  left: calc(50% - 3vh);
-  top: calc(50%);
-  transform: rotate(292.5deg) translateY(-10vh);
-}
-.layer-eight-14 {
-  position: absolute;
-  width: 5.5vh;
-  left: calc(50% - 3vh);
-  top: calc(50%);
-  transform: rotate(315deg) translateY(-10vh);
-}
-.layer-eight-15 {
-  position: absolute;
-  width: 5.5vh;
-  left: calc(50% - 3vh);
-  top: calc(50%);
-  transform: rotate(337.5deg) translateY(-10vh);
 }
 
 body {

@@ -528,7 +528,7 @@ function App() {
             {outer.map((item, index) => (
               <div
                 key={index}
-                className={"outer-" + index}
+                className={`pos-${index} outer`}
                 onClick={() => outerWheelShift(index)}
               >
                 {item}
@@ -539,49 +539,49 @@ function App() {
             {inner.map((item, index) => (
               <div
                 key={index}
-                className={"inner-" + index}
+                className={`pos-${index} inner`}
                 onClick={() => innerWheelShift(index)}
               >
                 {item}
               </div>
             ))}
             {layerOne.map((item, index) => (
-              <div key={index} className={"layer-one-" + index}>
+              <div key={index} className={`pos-${index} layer-one`}>
                 {item}
               </div>
             ))}
             {layerTwo.map((item, index) => (
-              <div key={index} className={"layer-two-" + index}>
+              <div key={index} className={`pos-${index} layer-two`}>
                 {item}
               </div>
             ))}
             {layerThree.map((item, index) => (
-              <div key={index} className={"layer-three-" + index}>
+              <div key={index} className={`pos-${index} layer-three`}>
                 {item}
               </div>
             ))}
             {layerFour.map((item, index) => (
-              <div key={index} className={"layer-four-" + index}>
+              <div key={index} className={`pos-${index} layer-four`}>
                 {item}
               </div>
             ))}
             {layerFive.map((item, index) => (
-              <div key={index} className={"layer-five-" + index}>
+              <div key={index} className={`pos-${index} layer-five`}>
                 {item}
               </div>
             ))}
             {layerSix.map((item, index) => (
-              <div key={index} className={"layer-six-" + index}>
+              <div key={index} className={`pos-${index} layer-six`}>
                 {item}
               </div>
             ))}
             {layerSeven.map((item, index) => (
-              <div key={index} className={"layer-seven-" + index}>
+              <div key={index} className={`pos-${index} layer-seven`}>
                 {item}
               </div>
             ))}
             {layerEight.map((item, index) => (
-              <div key={index} className={"layer-eight-" + index}>
+              <div key={index} className={`pos-${index} layer-eight`}>
                 {item}
               </div>
             ))}

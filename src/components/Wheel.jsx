@@ -1,10 +1,8 @@
 import { useState, useEffect } from "react";
-import "./App.css";
-import { wheelData, outerWheel } from "./assets/wheelData";
-import svg from "./assets/Infobox.svg";
-import Wheel from "./components/Wheel.jsx";
+// import "../App.css";
+import { wheelData, outerWheel } from "../assets/wheelData";
 
-function App() {
+function Wheel(props) {
   //our outer wheel options are imported from the datasets stored in the assets folder
   /* our inner wheel data are the keys from our wheelData object stored in the assets folder; 
   we use Chatsubo's keys but each of the options has identical keys representing the inner wheel*/
@@ -503,106 +501,83 @@ function App() {
     innerWheelShift(0);
   }, [outer]);
 
-  const [info, setInfo] = useState(true);
-  function infoToggle() {
-    setInfo(!info);
-  }
-
   return (
-    <div className="App">
-      <div id="background">
-        <div id="info-toggle">
-          {info ? (
-            <img src={svg} id="info" onClick={() => infoToggle()} />
-          ) : (
-            <div id="toggle-background">
-              <div id="toggle-outer-wheel" onClick={() => infoToggle()}>
-                <div id="toggle-inner-wheel">
-                  <div id="toggle-ring-wheel"></div>
-                </div>
-              </div>
-            </div>
-          )}
-        </div>
-        {info ? <Wheel /> : <></>}
-        {/* <div id="outer-wheel">
-          <div>
-            {outer.map((item, index) => (
-              <div
-                key={index}
-                className={`pos-${index} outer`}
-                onClick={() => outerWheelShift(index)}
-              >
-                {item}
-              </div>
-            ))}
+    <div id="outer-wheel">
+      <div>
+        {outer.map((item, index) => (
+          <div
+            key={index}
+            className={`pos-${index} outer`}
+            onClick={() => outerWheelShift(index)}
+          >
+            {item}
           </div>
-          <div id="inner-wheel">
-            {inner.map((item, index) => (
-              <div
-                key={index}
-                className={`pos-${index} inner`}
-                onClick={() => innerWheelShift(index)}
-              >
-                {item}
-              </div>
-            ))}
-            {layerOne.map((item, index) => (
-              <div key={index} className={`pos-${index} layer-one`}>
-                {item}
-              </div>
-            ))}
-            {layerTwo.map((item, index) => (
-              <div key={index} className={`pos-${index} layer-two`}>
-                {item}
-              </div>
-            ))}
-            {layerThree.map((item, index) => (
-              <div key={index} className={`pos-${index} layer-three`}>
-                {item}
-              </div>
-            ))}
-            {layerFour.map((item, index) => (
-              <div key={index} className={`pos-${index} layer-four`}>
-                {item}
-              </div>
-            ))}
-            {layerFive.map((item, index) => (
-              <div key={index} className={`pos-${index} layer-five`}>
-                {item}
-              </div>
-            ))}
-            {layerSix.map((item, index) => (
-              <div key={index} className={`pos-${index} layer-six`}>
-                {item}
-              </div>
-            ))}
-            {layerSeven.map((item, index) => (
-              <div key={index} className={`pos-${index} layer-seven`}>
-                {item}
-              </div>
-            ))}
-            {layerEight.map((item, index) => (
-              <div key={index} className={`pos-${index} layer-eight`}>
-                {item}
-              </div>
-            ))}
-            {title.map((item, index) => (
-              <h2 key={index} className={"title-" + index}>
-                {item}
-              </h2>
-            ))}
-            {subtitle.map((item, index) => (
-              <h3 key={index} className={"subtitle-" + index}>
-                {item}
-              </h3>
-            ))}
-            <div id="ring-wheel"></div>
+        ))}
+      </div>
+      <div id="inner-wheel">
+        {inner.map((item, index) => (
+          <div
+            key={index}
+            className={`pos-${index} inner`}
+            onClick={() => innerWheelShift(index)}
+          >
+            {item}
           </div>
-        </div> */}
+        ))}
+        {layerOne.map((item, index) => (
+          <div key={index} className={`pos-${index} layer-one`}>
+            {item}
+          </div>
+        ))}
+        {layerTwo.map((item, index) => (
+          <div key={index} className={`pos-${index} layer-two`}>
+            {item}
+          </div>
+        ))}
+        {layerThree.map((item, index) => (
+          <div key={index} className={`pos-${index} layer-three`}>
+            {item}
+          </div>
+        ))}
+        {layerFour.map((item, index) => (
+          <div key={index} className={`pos-${index} layer-four`}>
+            {item}
+          </div>
+        ))}
+        {layerFive.map((item, index) => (
+          <div key={index} className={`pos-${index} layer-five`}>
+            {item}
+          </div>
+        ))}
+        {layerSix.map((item, index) => (
+          <div key={index} className={`pos-${index} layer-six`}>
+            {item}
+          </div>
+        ))}
+        {layerSeven.map((item, index) => (
+          <div key={index} className={`pos-${index} layer-seven`}>
+            {item}
+          </div>
+        ))}
+        {layerEight.map((item, index) => (
+          <div key={index} className={`pos-${index} layer-eight`}>
+            {item}
+          </div>
+        ))}
+        {title.map((item, index) => (
+          <h2 key={index} className={"title-" + index}>
+            {item}
+          </h2>
+        ))}
+        {subtitle.map((item, index) => (
+          <h3 key={index} className={"subtitle-" + index}>
+            {item}
+          </h3>
+        ))}
+        <div id="ring-wheel"></div>
       </div>
     </div>
   );
 }
 
-export default App;
+export default Wheel;

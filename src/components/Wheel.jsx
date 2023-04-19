@@ -59,11 +59,17 @@ function Wheel(props) {
             </div>
           )
         )}
-        {props.layers.layerFour.map((item, index) => (
-          <div key={index} className={`pos-${index} layer-four`}>
-            {item}
-          </div>
-        ))}
+        {props.layers.layerFour.map((item, index) =>
+          Number(item) ? (
+            <div key={index} className={`pos-${index} layer-four number`}>
+              {item}
+            </div>
+          ) : (
+            <div key={index} className={`pos-${index} layer-four`}>
+              {item}
+            </div>
+          )
+        )}
         {props.layers.layerFive.map((item, index) =>
           Number(item) ? (
             <div key={index} className={`pos-${index} layer-five number`}>

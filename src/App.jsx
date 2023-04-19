@@ -3,10 +3,11 @@ import "./App.css";
 import { wheelData, outerWheel } from "./assets/wheelData";
 import svg from "./assets/Infobox.svg";
 import Wheel from "./components/Wheel.jsx";
+import Info from "./components/Info.jsx";
 
 function App() {
   //our outer wheel options are imported from the datasets stored in the assets folder
-  /* our inner wheel data are the keys from our wheelData object stored in the assets folder; 
+  /* our inner wheel data are the keys from our wheelData object stored in the assets folder;
   we use Chatsubo's keys but each of the options has identical keys representing the inner wheel*/
   const innerWheel = Object.keys(wheelData.Chatsubo);
   // defining the variables that change dependent on wheel positions and start their values
@@ -293,6 +294,7 @@ function App() {
   }
   //shifts the innerwheel positions and refreshes data values
   function innerWheelShift(position) {
+    console.log("trigger inner");
     //tracks the current position of the wheel tracking based on the location of the original top position
     //this is used for the "layers" because we will be refreshing their data each time
     const topPosition = 16 - inner.indexOf("Cyberdeck");
@@ -495,6 +497,7 @@ function App() {
   }
   //shifts the outer wheel
   function outerWheelShift(position) {
+    console.log("trigger outer");
     const mod = outer.splice(0, position);
     setOuter(outer.concat(mod));
   }
@@ -524,7 +527,26 @@ function App() {
             </div>
           )}
         </div>
-        {info ? <Wheel /> : <></>}
+        {info ? (
+          <Wheel
+            outerWheelClick={outerWheelShift}
+            innerWheelClick={innerWheelShift}
+            layerOne={layerOne}
+            layerTwo={layerTwo}
+            layerThree={layerThree}
+            layerFour={layerFour}
+            layerFive={layerFive}
+            layerSix={layerSix}
+            layerSeven={layerSeven}
+            layerEight={layerEight}
+            outer={outer}
+            inner={inner}
+            title={title}
+            subtitle={subtitle}
+          />
+        ) : (
+          <Info />
+        )}
         {/* <div id="outer-wheel">
           <div>
             {outer.map((item, index) => (

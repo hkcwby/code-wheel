@@ -232,16 +232,28 @@ function App() {
   //creating react state management for each of these data positions above
   const [outer, setOuter] = useState(outerWheel);
   const [inner, setInner] = useState(innerWheel);
-  const [layerOne, setLayerOne] = useState(layerOneWheel);
-  const [layerTwo, setLayerTwo] = useState(layerTwoWheel);
-  const [layerThree, setLayerThree] = useState(layerThreeWheel);
-  const [layerFour, setLayerFour] = useState(layerFourWheel);
-  const [layerFive, setLayerFive] = useState(layerFiveWheel);
-  const [layerSix, setLayerSix] = useState(layerSixWheel);
-  const [layerSeven, setLayerSeven] = useState(layerSevenWheel);
-  const [layerEight, setLayerEight] = useState(layerEightWheel);
-  const [title, setTitle] = useState(titleWheel);
-  const [subtitle, setSubtitle] = useState(subtitleWheel);
+  // const [layerOne, setLayerOne] = useState(layerOneWheel);
+  // const [layerTwo, setLayerTwo] = useState(layerTwoWheel);
+  // const [layerThree, setLayerThree] = useState(layerThreeWheel);
+  // const [layerFour, setLayerFour] = useState(layerFourWheel);
+  // const [layerFive, setLayerFive] = useState(layerFiveWheel);
+  // const [layerSix, setLayerSix] = useState(layerSixWheel);
+  // const [layerSeven, setLayerSeven] = useState(layerSevenWheel);
+  // const [layerEight, setLayerEight] = useState(layerEightWheel);
+  // const [title, setTitle] = useState(titleWheel);
+  // const [subtitle, setSubtitle] = useState(subtitleWheel);
+  const [layers, setLayers] = useState({
+    layerOne: layerOneWheel,
+    layerTwo: layerTwoWheel,
+    layerThree: layerThreeWheel,
+    layerFour: layerFourWheel,
+    layerFive: layerFiveWheel,
+    layerSix: layerSixWheel,
+    layerSeven: layerSevenWheel,
+    layerEight: layerEightWheel,
+    title: titleWheel,
+    subtitle: subtitleWheel,
+  });
 
   //a function to update the various data values that appear on the wheel
   function updateValues(inner, outer) {
@@ -294,22 +306,26 @@ function App() {
   }
   //shifts the innerwheel positions and refreshes data values
   function innerWheelShift(position) {
-    console.log("trigger inner");
     //tracks the current position of the wheel tracking based on the location of the original top position
     //this is used for the "layers" because we will be refreshing their data each time
     const topPosition = 16 - inner.indexOf("Cyberdeck");
     //first step in modifying the inner wheel values positions
-    const innerMod = inner.splice(0, position);
+    const innerNew = [...inner];
+    const innerMod = innerNew.splice(0, position);
     //update data based on the new inner and existing outer wheel positions
-    updateValues(inner.concat(...innerMod), outer);
+    updateValues(innerNew.concat(...innerMod), outer);
     //set the new inner wheel positions for rendering
-    setInner(inner.concat(...innerMod));
-    //update the title position and sub title positions in a similar way
-    const titleMod = title.splice(0, position);
-    setTitle(title.concat(...titleMod));
+    setInner(innerNew.concat(...innerMod));
 
-    const subtitleMod = subtitle.splice(0, position);
-    setSubtitle(subtitle.concat(...subtitleMod));
+    //update the title position and sub title positions in a similar way
+    const titleNew = [...layers.title];
+    const titleMod = titleNew.splice(0, position);
+    const dataTitle = titleNew.concat(titleMod);
+    // setTitle(titleNew.concat(titleMod));
+    const subtitleNew = [...layers.subtitle];
+    const subtitleMod = subtitleNew.splice(0, position);
+    const dataSubtitle = subtitleNew.concat(subtitleMod);
+    // setSubtitle(subtitleNew.concat(subtitleMod));
 
     //now refresh each of the eight wheel data layers with the updated variable values
 
@@ -338,7 +354,7 @@ function App() {
     modOne = dataOne.splice(0, position);
     dataOne = dataOne.concat(modOne);
     //assign the layer
-    setLayerOne([...dataOne]);
+    // setLayerOne([...dataOne]);
     //repeat the process for layers two through eight
     let dataTwo = [
       "",
@@ -361,7 +377,8 @@ function App() {
     let modTwo = dataTwo.splice(0, topPosition);
     dataTwo = dataTwo.concat(modTwo);
     modTwo = dataTwo.splice(0, position);
-    setLayerTwo(dataTwo.concat(modTwo));
+    dataTwo = dataTwo.concat(modTwo);
+    // setLayerTwo(dataTwo);
     let dataThree = [
       "AI",
       "",
@@ -383,7 +400,8 @@ function App() {
     let modThree = dataThree.splice(0, topPosition);
     dataThree = dataThree.concat(modThree);
     modThree = dataThree.splice(0, position);
-    setLayerThree(dataThree.concat(modThree));
+    dataThree = dataThree.concat(modThree);
+    // setLayerThree(dataThree.concat(modThree));
     let dataFour = [
       ai,
       "",
@@ -405,7 +423,8 @@ function App() {
     let modFour = dataFour.splice(0, topPosition);
     dataFour = dataFour.concat(modFour);
     modFour = dataFour.splice(0, position);
-    setLayerFour(dataFour.concat(modFour));
+    dataFour = dataFour.concat(modFour);
+    // setLayerFour(dataFour.concat(modFour));
     let dataFive = [
       "",
       "",
@@ -427,7 +446,8 @@ function App() {
     let modFive = dataFive.splice(0, topPosition);
     dataFive = dataFive.concat(modFive);
     modFive = dataFive.splice(0, position);
-    setLayerFive(dataFive.concat(modFive));
+    dataFive = dataFive.concat(modFive);
+    // setLayerFive(dataFive.concat(modFive));
     let dataSix = [
       fujiElectric,
       "",
@@ -449,7 +469,8 @@ function App() {
     let modSix = dataSix.splice(0, topPosition);
     dataSix = dataSix.concat(modSix);
     modSix = dataSix.splice(0, position);
-    setLayerSix(dataSix.concat(modSix));
+    dataSix = dataSix.concat(modSix);
+    // setLayerSix(dataSix.concat(modSix));
     let dataSeven = [
       "Fuji Electric",
       "",
@@ -471,7 +492,8 @@ function App() {
     let modSeven = dataSeven.splice(0, topPosition);
     dataSeven = dataSeven.concat(modSeven);
     modSeven = dataSeven.splice(0, position);
-    setLayerSeven(dataSeven.concat(modSeven));
+    dataSeven = dataSeven.concat(modSeven);
+    // setLayerSeven(dataSeven.concat(modSeven));
     let dataEight = [
       "",
       "",
@@ -493,13 +515,27 @@ function App() {
     let modEight = dataEight.splice(0, topPosition);
     dataEight = dataEight.concat(modEight);
     modEight = dataEight.splice(0, position);
-    setLayerEight(dataEight.concat(modEight));
+    dataEight = dataEight.concat(modEight);
+    // setLayerEight(dataEight.concat(modEight));
+
+    setLayers({
+      layerOne: dataOne,
+      layerTwo: dataTwo,
+      layerThree: dataThree,
+      layerFour: dataFour,
+      layerFive: dataFive,
+      layerSix: dataSix,
+      layerSeven: dataSeven,
+      layerEight: dataEight,
+      title: dataTitle,
+      subtitle: dataSubtitle,
+    });
   }
   //shifts the outer wheel
   function outerWheelShift(position) {
-    console.log("trigger outer");
-    const mod = outer.splice(0, position);
-    setOuter(outer.concat(mod));
+    const outerNew = [...outer];
+    const outerMod = outerNew.splice(0, position);
+    setOuter(outerNew.concat(outerMod));
   }
   //a useEffect hook, rerun the innerWheel data calc (unmoved) when the outer wheel is updated
   useEffect(() => {
@@ -531,18 +567,19 @@ function App() {
           <Wheel
             outerWheelClick={outerWheelShift}
             innerWheelClick={innerWheelShift}
-            layerOne={layerOne}
-            layerTwo={layerTwo}
-            layerThree={layerThree}
-            layerFour={layerFour}
-            layerFive={layerFive}
-            layerSix={layerSix}
-            layerSeven={layerSeven}
-            layerEight={layerEight}
+            // layerOne={layerOne}
+            // layerTwo={layerTwo}
+            // layerThree={layerThree}
+            // layerFour={layerFour}
+            // layerFive={layerFive}
+            // layerSix={layerSix}
+            // layerSeven={layerSeven}
+            // layerEight={layerEight}
+            // title={title}
+            // subtitle={subtitle}
+            layers={layers}
             outer={outer}
             inner={inner}
-            title={title}
-            subtitle={subtitle}
           />
         ) : (
           <Info />

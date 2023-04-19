@@ -1,3 +1,9 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -487,4 +493,8 @@ body {
   left: calc(50% - 19vh);
   top: calc(50% - 15vh);
   transform: rotate(348.75deg) translateY(-10vh);
+}
+
+.number {
+  font-weight: bold;
 }

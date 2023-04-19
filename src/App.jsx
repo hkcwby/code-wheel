@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import "./App.css";
 import { wheelData, outerWheel } from "./assets/wheelData";
 import svg from "./assets/Infobox.svg";
 import Wheel from "./components/Wheel.jsx";
@@ -232,16 +231,7 @@ function App() {
   //creating react state management for each of these data positions above
   const [outer, setOuter] = useState(outerWheel);
   const [inner, setInner] = useState(innerWheel);
-  // const [layerOne, setLayerOne] = useState(layerOneWheel);
-  // const [layerTwo, setLayerTwo] = useState(layerTwoWheel);
-  // const [layerThree, setLayerThree] = useState(layerThreeWheel);
-  // const [layerFour, setLayerFour] = useState(layerFourWheel);
-  // const [layerFive, setLayerFive] = useState(layerFiveWheel);
-  // const [layerSix, setLayerSix] = useState(layerSixWheel);
-  // const [layerSeven, setLayerSeven] = useState(layerSevenWheel);
-  // const [layerEight, setLayerEight] = useState(layerEightWheel);
-  // const [title, setTitle] = useState(titleWheel);
-  // const [subtitle, setSubtitle] = useState(subtitleWheel);
+
   const [layers, setLayers] = useState({
     layerOne: layerOneWheel,
     layerTwo: layerTwoWheel,
@@ -321,11 +311,10 @@ function App() {
     const titleNew = [...layers.title];
     const titleMod = titleNew.splice(0, position);
     const dataTitle = titleNew.concat(titleMod);
-    // setTitle(titleNew.concat(titleMod));
+
     const subtitleNew = [...layers.subtitle];
     const subtitleMod = subtitleNew.splice(0, position);
     const dataSubtitle = subtitleNew.concat(subtitleMod);
-    // setSubtitle(subtitleNew.concat(subtitleMod));
 
     //now refresh each of the eight wheel data layers with the updated variable values
 
@@ -353,8 +342,6 @@ function App() {
     //now adjust it to the new position based on the clicked position
     modOne = dataOne.splice(0, position);
     dataOne = dataOne.concat(modOne);
-    //assign the layer
-    // setLayerOne([...dataOne]);
     //repeat the process for layers two through eight
     let dataTwo = [
       "",
@@ -378,7 +365,7 @@ function App() {
     dataTwo = dataTwo.concat(modTwo);
     modTwo = dataTwo.splice(0, position);
     dataTwo = dataTwo.concat(modTwo);
-    // setLayerTwo(dataTwo);
+
     let dataThree = [
       "AI",
       "",
@@ -401,7 +388,7 @@ function App() {
     dataThree = dataThree.concat(modThree);
     modThree = dataThree.splice(0, position);
     dataThree = dataThree.concat(modThree);
-    // setLayerThree(dataThree.concat(modThree));
+
     let dataFour = [
       ai,
       "",
@@ -424,7 +411,7 @@ function App() {
     dataFour = dataFour.concat(modFour);
     modFour = dataFour.splice(0, position);
     dataFour = dataFour.concat(modFour);
-    // setLayerFour(dataFour.concat(modFour));
+
     let dataFive = [
       "",
       "",
@@ -447,7 +434,7 @@ function App() {
     dataFive = dataFive.concat(modFive);
     modFive = dataFive.splice(0, position);
     dataFive = dataFive.concat(modFive);
-    // setLayerFive(dataFive.concat(modFive));
+
     let dataSix = [
       fujiElectric,
       "",
@@ -470,7 +457,7 @@ function App() {
     dataSix = dataSix.concat(modSix);
     modSix = dataSix.splice(0, position);
     dataSix = dataSix.concat(modSix);
-    // setLayerSix(dataSix.concat(modSix));
+
     let dataSeven = [
       "Fuji Electric",
       "",
@@ -493,7 +480,7 @@ function App() {
     dataSeven = dataSeven.concat(modSeven);
     modSeven = dataSeven.splice(0, position);
     dataSeven = dataSeven.concat(modSeven);
-    // setLayerSeven(dataSeven.concat(modSeven));
+
     let dataEight = [
       "",
       "",
@@ -516,7 +503,6 @@ function App() {
     dataEight = dataEight.concat(modEight);
     modEight = dataEight.splice(0, position);
     dataEight = dataEight.concat(modEight);
-    // setLayerEight(dataEight.concat(modEight));
 
     setLayers({
       layerOne: dataOne,
@@ -567,16 +553,6 @@ function App() {
           <Wheel
             outerWheelClick={outerWheelShift}
             innerWheelClick={innerWheelShift}
-            // layerOne={layerOne}
-            // layerTwo={layerTwo}
-            // layerThree={layerThree}
-            // layerFour={layerFour}
-            // layerFive={layerFive}
-            // layerSix={layerSix}
-            // layerSeven={layerSeven}
-            // layerEight={layerEight}
-            // title={title}
-            // subtitle={subtitle}
             layers={layers}
             outer={outer}
             inner={inner}
@@ -584,81 +560,6 @@ function App() {
         ) : (
           <Info />
         )}
-        {/* <div id="outer-wheel">
-          <div>
-            {outer.map((item, index) => (
-              <div
-                key={index}
-                className={`pos-${index} outer`}
-                onClick={() => outerWheelShift(index)}
-              >
-                {item}
-              </div>
-            ))}
-          </div>
-          <div id="inner-wheel">
-            {inner.map((item, index) => (
-              <div
-                key={index}
-                className={`pos-${index} inner`}
-                onClick={() => innerWheelShift(index)}
-              >
-                {item}
-              </div>
-            ))}
-            {layerOne.map((item, index) => (
-              <div key={index} className={`pos-${index} layer-one`}>
-                {item}
-              </div>
-            ))}
-            {layerTwo.map((item, index) => (
-              <div key={index} className={`pos-${index} layer-two`}>
-                {item}
-              </div>
-            ))}
-            {layerThree.map((item, index) => (
-              <div key={index} className={`pos-${index} layer-three`}>
-                {item}
-              </div>
-            ))}
-            {layerFour.map((item, index) => (
-              <div key={index} className={`pos-${index} layer-four`}>
-                {item}
-              </div>
-            ))}
-            {layerFive.map((item, index) => (
-              <div key={index} className={`pos-${index} layer-five`}>
-                {item}
-              </div>
-            ))}
-            {layerSix.map((item, index) => (
-              <div key={index} className={`pos-${index} layer-six`}>
-                {item}
-              </div>
-            ))}
-            {layerSeven.map((item, index) => (
-              <div key={index} className={`pos-${index} layer-seven`}>
-                {item}
-              </div>
-            ))}
-            {layerEight.map((item, index) => (
-              <div key={index} className={`pos-${index} layer-eight`}>
-                {item}
-              </div>
-            ))}
-            {title.map((item, index) => (
-              <h2 key={index} className={"title-" + index}>
-                {item}
-              </h2>
-            ))}
-            {subtitle.map((item, index) => (
-              <h3 key={index} className={"subtitle-" + index}>
-                {item}
-              </h3>
-            ))}
-            <div id="ring-wheel"></div>
-          </div>
-        </div> */}
       </div>
     </div>
   );

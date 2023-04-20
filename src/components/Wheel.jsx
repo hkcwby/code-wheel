@@ -4,7 +4,7 @@ import { wheelData, outerWheel } from "../assets/wheelData";
 
 function Wheel(props) {
   return (
-    <div id="outer-wheel">
+    <div className="outer-wheel">
       <div>
         {props.outer.map((item, index) => (
           <div
@@ -16,7 +16,7 @@ function Wheel(props) {
           </div>
         ))}
       </div>
-      <div id="inner-wheel">
+      <div className="inner-wheel">
         {props.inner.map((item, index) => (
           <div
             key={index}

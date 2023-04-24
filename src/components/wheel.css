@@ -1,95 +1,4 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-#background {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#info-toggle {
-  align-self: flex-start;
-  display: flex;
-  align-items: flex-start;
-}
-#info {
-  height: 10vh;
-  width: 10vh;
-}
-#toggle-background {
-  height: 10vh;
-  width: 10vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#toggle-outer-wheel {
-  position: relative;
-  border-radius: 50%;
-  height: 8vh;
-  width: 8vh;
-  border-color: black;
-  border-style: solid;
-  border-width: 0.03vh;
-  background-color: antiquewhite;
-  color: black;
-}
-
-#toggle-inner-wheel {
-  left: 0.6vh;
-  top: 0.6vh;
-  border-radius: 50%;
-  position: absolute;
-  height: 6.5vh;
-  width: 6.5vh;
-  border-color: black;
-  border-style: solid;
-  border-width: 0.03vh;
-}
-#toggle-ring-wheel {
-  transform: translateX(2.75vh) translateY(2.75vh);
-  border-radius: 50%;
-  height: 0.5vw;
-  width: 0.5vw;
-  border-color: burlywood;
-  border-style: solid;
-  border-width: 0.02vw;
-  background-color: goldenrod;
-}
-
-/* the styling for the three main structure components the outer wheel 
-inner wheel and the ring in the center */
-.outer-wheel {
-  font-size: 1.5vh;
-  position: relative;
-  border-radius: 50%;
-  height: 90vh;
-  width: 90vh;
-  border-color: black;
-  border-style: solid;
-  border-width: 0.3vh;
-  background-color: antiquewhite;
-  color: black;
-}
-
-/* .inner-wheel {
+.inner-wheel {
   left: 7.5vh;
   top: 7.5vh;
   border-radius: 50%;
@@ -108,11 +17,11 @@ inner wheel and the ring in the center */
   border-color: burlywood;
   border-style: solid;
   border-width: 0.2vw;
-} */
+}
 
 /* each out position needs specific styling to transpose the values around the circlular center point */
 /* this is done for the outer wheel the inner wheel and each layer of data points */
-/* .title {
+.title {
   font-size: 2.5em;
   rotate: 11.25deg;
   width: 15vh;
@@ -265,10 +174,10 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-} */
+}
 
 /* the title and subtitle are at an off angle between two points on the wheel */
-/* .title-0 {
+.title-0 {
   position: absolute;
   font-size: 2.5em;
   left: calc(50% - 13vh);
@@ -498,4 +407,4 @@ body {
 
 .number {
   font-weight: bold;
-} */
+}

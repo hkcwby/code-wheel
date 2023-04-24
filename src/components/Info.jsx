@@ -42,14 +42,14 @@ function Info() {
         </p>
         <p className="info-text-bottom">
           This web application is functional replica of the original code wheel.
-          So you won't need to be a Console Cowboy or crack the{" "}
+          Now you won't need to be a Console Cowboy or crack the{" "}
           <a
             target="_blank"
             href="https://en.wikipedia.org/wiki/Intrusion_Countermeasures_Electronics"
           >
             ICE
           </a>{" "}
-          to enjoy this game; its so easy now any{" "}
+          to enjoy this game; its so easy any{" "}
           <a
             target="_blank"
             href="https://www.urbandictionary.com/define.php?term=hot%20dogger"

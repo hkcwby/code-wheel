@@ -1,7 +1,3 @@
-import { useState, useEffect } from "react";
-// import "../App.css";
-import { wheelData, outerWheel } from "../assets/wheelData";
-
 function Wheel(props) {
   return (
     <div className="outer-wheel">

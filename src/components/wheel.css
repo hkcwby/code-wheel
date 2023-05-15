@@ -1,3 +1,10 @@
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
 .inner-wheel {
   left: 7.5vh;
   top: 7.5vh;
@@ -21,109 +28,62 @@
 
 /* each out position needs specific styling to transpose the values around the circlular center point */
 /* this is done for the outer wheel the inner wheel and each layer of data points */
-.title {
-  font-size: 2.5em;
-  rotate: 11.25deg;
-  width: 15vh;
-  left: calc(50% - 15vh);
-  transform-origin: rotate(11.25deg) translateY(-18vh);
-}
-.pos-0 {
+/* setting the data to an absolute point close in the center */
+.data {
   position: absolute;
   left: calc(50% - 8vh);
   top: calc(50% - 0.5vh);
+}
+/* pivot each data item to a specific angle around the wheel */
+.pos-data-0 {
   rotate: 0deg;
 }
-.pos-1 {
-  position: absolute;
-  left: calc(50% - 8vh);
-  top: calc(50% - 0.5vh);
+.pos-data-1 {
   rotate: 22.5deg;
 }
-.pos-2 {
-  position: absolute;
-  left: calc(50% - 8vh);
-  top: calc(50% - 0.5vh);
+.pos-data-2 {
   rotate: 45deg;
 }
-.pos-3 {
-  position: absolute;
-  left: calc(50% - 8vh);
-  top: calc(50% - 0.5vh);
+.pos-data-3 {
   rotate: 67.5deg;
 }
-.pos-4 {
-  position: absolute;
-  left: calc(50% - 8vh);
-  top: calc(50% - 0.5vh);
+.pos-data-4 {
   rotate: 90deg;
 }
-.pos-5 {
-  position: absolute;
-  left: calc(50% - 8vh);
-  top: calc(50% - 0.5vh);
+.pos-data-5 {
   rotate: 112.5deg;
 }
-.pos-6 {
-  position: absolute;
-  left: calc(50% - 8vh);
-  top: calc(50% - 0.5vh);
+.pos-data-6 {
   rotate: 135deg;
 }
-.pos-7 {
-  position: absolute;
-  left: calc(50% - 8vh);
-  top: calc(50% - 0.5vh);
+.pos-data-7 {
   rotate: 157.5deg;
 }
-.pos-8 {
-  position: absolute;
-  left: calc(50% - 8vh);
-  top: calc(50% - 0.5vh);
+.pos-data-8 {
   rotate: 180deg;
 }
-.pos-9 {
-  position: absolute;
-  left: calc(50% - 8vh);
-  top: calc(50% - 0.5vh);
+.pos-data-9 {
   rotate: 202.5deg;
 }
-.pos-10 {
-  position: absolute;
-  left: calc(50% - 8vh);
-  top: calc(50% - 0.5vh);
+.pos-data-10 {
   rotate: 225deg;
 }
-.pos-11 {
-  position: absolute;
-  left: calc(50% - 8vh);
-  top: calc(50% - 0.5vh);
+.pos-data-11 {
   rotate: 247.5deg;
 }
-.pos-12 {
-  position: absolute;
-  left: calc(50% - 8vh);
-  top: calc(50% - 0.5vh);
+.pos-data-12 {
   rotate: 270deg;
 }
-.pos-13 {
-  position: absolute;
-  left: calc(50% - 8vh);
-  top: calc(50% - 0.5vh);
+.pos-data-13 {
   rotate: 292.5deg;
 }
-.pos-14 {
-  position: absolute;
-  left: calc(50% - 8vh);
-  top: calc(50% - 0.5vh);
+.pos-data-14 {
   rotate: 315deg;
 }
-.pos-15 {
-  position: absolute;
-  left: calc(50% - 8vh);
-  top: calc(50% - 0.5vh);
+.pos-data-15 {
   rotate: 337.5deg;
 }
+/* place each of the items of data closer or further from the edge */
 .outer {
   width: 16vh;
   transform: translateY(-42vh);
@@ -168,243 +128,82 @@
   transform: translateY(-10vh);
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-/* the title and subtitle are at an off angle between two points on the wheel */
-.title-0 {
+/* title, subtitle and logo are always the same distance from the center */
+.title-pos {
   position: absolute;
   font-size: 2.5em;
   left: calc(50% - 14.5vh);
   top: calc(50% - 6vh);
-  transform: rotate(11.25deg) translateY(-24vh);
+  transform: translateY(-24vh);
+}
+
+.subtitle-pos {
+  position: absolute;
+  font-size: 1.8em;
+  left: calc(50% - 18.5vh);
+  top: calc(50% - 5vh);
+  transform: translateY(-20vh);
+}
+
+.logo {
+  height: 10vh;
+  position: absolute;
+  left: calc(50% - 12vh);
+  top: calc(50% - 3vh);
+}
+
+/* the title, subtitle and logo are at an off angle between two points on the wheel */
+
+.title-0 {
+  rotate: 11.25deg;
 }
 .title-1 {
-  position: absolute;
-  font-size: 2.5em;
-  left: calc(50% - 14.5vh);
-  top: calc(50% - 6vh);
-  transform: rotate(33.75deg) translateY(-24vh);
+  rotate: 33.75deg;
 }
 .title-2 {
-  position: absolute;
-  font-size: 2.5em;
-  left: calc(50% - 14.5vh);
-  top: calc(50% - 6vh);
-  transform: rotate(56.25deg) translateY(-24vh);
+  rotate: 56.25deg;
 }
 .title-3 {
-  position: absolute;
-  font-size: 2.5em;
-  left: calc(50% - 14.5vh);
-  top: calc(50% - 6vh);
-  transform: rotate(78.75deg) translateY(-24vh);
+  rotate: 78.75deg;
 }
 .title-4 {
-  position: absolute;
-  font-size: 2.5em;
-  left: calc(50% - 14.5vh);
-  top: calc(50% - 6vh);
-  transform: rotate(101.25deg) translateY(-24vh);
+  rotate: 101.25deg;
 }
 .title-5 {
-  position: absolute;
-  font-size: 2.5em;
-  left: calc(50% - 14.5vh);
-  top: calc(50% - 6vh);
-  transform: rotate(123.75deg) translateY(-24vh);
+  rotate: 123.75deg;
 }
 .title-6 {
-  position: absolute;
-  font-size: 2.5em;
-  left: calc(50% - 14.5vh);
-  top: calc(50% - 6vh);
-  transform: rotate(146.25deg) translateY(-24vh);
+  rotate: 146.25deg;
 }
-
 .title-7 {
-  position: absolute;
-  font-size: 2.5em;
-  left: calc(50% - 14.5vh);
-  top: calc(50% - 6vh);
-  transform: rotate(168.75deg) translateY(-24vh);
+  rotate: 168.75deg;
 }
 .title-8 {
-  position: absolute;
-  font-size: 2.5em;
-  left: calc(50% - 14.5vh);
-  top: calc(50% - 6vh);
-  transform: rotate(191.25deg) translateY(-24vh);
+  rotate: 191.25deg;
 }
 .title-9 {
-  position: absolute;
-  font-size: 2.5em;
-  left: calc(50% - 14.5vh);
-  top: calc(50% - 6vh);
-  transform: rotate(213.75deg) translateY(-24vh);
+  rotate: 213.75deg;
 }
 .title-10 {
-  position: absolute;
-  font-size: 2.5em;
-  left: calc(50% - 14.5vh);
-  top: calc(50% - 6vh);
-  transform: rotate(236.25deg) translateY(-24vh);
+  rotate: 236.25deg;
 }
 .title-11 {
-  position: absolute;
-  font-size: 2.5em;
-  left: calc(50% - 14.5vh);
-  top: calc(50% - 6vh);
-  transform: rotate(258.75deg) translateY(-24vh);
+  rotate: 258.75deg;
 }
 .title-12 {
-  position: absolute;
-  font-size: 2.5em;
-  left: calc(50% - 14.5vh);
-  top: calc(50% - 6vh);
-  transform: rotate(281.25deg) translateY(-24vh);
+  rotate: 281.25deg;
 }
 .title-13 {
-  position: absolute;
-  font-size: 2.5em;
-  left: calc(50% - 14.5vh);
-  top: calc(50% - 6vh);
-  transform: rotate(303.75deg) translateY(-24vh);
+  rotate: 303.75deg;
 }
 .title-14 {
-  position: absolute;
-  font-size: 2.5em;
-  left: calc(50% - 14.5vh);
-  top: calc(50% - 6vh);
-  transform: rotate(326.25deg) translateY(-24vh);
+  rotate: 326.25deg;
 }
 .title-15 {
-  position: absolute;
-  font-size: 2.5em;
-  left: calc(50% - 14.5vh);
-  top: calc(50% - 6vh);
-  transform: rotate(348.75deg) translateY(-24vh);
+  rotate: 348.75deg;
 }
 
-.subtitle-0 {
-  position: absolute;
-  font-size: 1.8em;
-  left: calc(50% - 18.5vh);
-  top: calc(50% - 5vh);
-  transform: rotate(11.25deg) translateY(-20vh);
-}
-.subtitle-1 {
-  position: absolute;
-  font-size: 1.8em;
-  left: calc(50% - 18.5vh);
-  top: calc(50% - 5vh);
-  transform: rotate(33.75deg) translateY(-20vh);
-}
-.subtitle-2 {
-  position: absolute;
-  font-size: 1.8em;
-  left: calc(50% - 18.5vh);
-  top: calc(50% - 5vh);
-  transform: rotate(56.25deg) translateY(-20vh);
-}
-.subtitle-3 {
-  position: absolute;
-  font-size: 1.8em;
-  left: calc(50% - 18.5vh);
-  top: calc(50% - 5vh);
-  transform: rotate(78.75deg) translateY(-20vh);
-}
-.subtitle-4 {
-  position: absolute;
-  font-size: 1.8em;
-  left: calc(50% - 18.5vh);
-  top: calc(50% - 5vh);
-  transform: rotate(101.25deg) translateY(-20vh);
-}
-.subtitle-5 {
-  position: absolute;
-  font-size: 1.8em;
-  left: calc(50% - 18.5vh);
-  top: calc(50% - 5vh);
-  transform: rotate(123.75deg) translateY(-20vh);
-}
-.subtitle-6 {
-  position: absolute;
-  font-size: 1.8em;
-  left: calc(50% - 18.5vh);
-  top: calc(50% - 5vh);
-  transform: rotate(146.25deg) translateY(-20vh);
-}
-
-.subtitle-7 {
-  position: absolute;
-  font-size: 1.8em;
-  left: calc(50% - 18.5vh);
-  top: calc(50% - 5vh);
-  transform: rotate(168.75deg) translateY(-20vh);
-}
-.subtitle-8 {
-  position: absolute;
-  font-size: 1.8em;
-  left: calc(50% - 18.5vh);
-  top: calc(50% - 5vh);
-  transform: rotate(191.25deg) translateY(-20vh);
-}
-.subtitle-9 {
-  position: absolute;
-  font-size: 1.8em;
-  left: calc(50% - 18.5vh);
-  top: calc(50% - 5vh);
-  transform: rotate(213.75deg) translateY(-20vh);
-}
-.subtitle-10 {
-  position: absolute;
-  font-size: 1.8em;
-  left: calc(50% - 18.5vh);
-  top: calc(50% - 5vh);
-  transform: rotate(236.25deg) translateY(-20vh);
-}
-.subtitle-11 {
-  position: absolute;
-  font-size: 1.8em;
-  left: calc(50% - 18.5vh);
-  top: calc(50% - 5vh);
-  transform: rotate(258.75deg) translateY(-20vh);
-}
-.subtitle-12 {
-  position: absolute;
-  font-size: 1.8em;
-  left: calc(50% - 18.5vh);
-  top: calc(50% - 5vh);
-  transform: rotate(281.25deg) translateY(-20vh);
-}
-.subtitle-13 {
-  position: absolute;
-  font-size: 1.8em;
-  left: calc(50% - 18.5vh);
-  top: calc(50% - 5vh);
-  transform: rotate(303.75deg) translateY(-20vh);
-}
-.subtitle-14 {
-  position: absolute;
-  font-size: 1.8em;
-  left: calc(50% - 18.5vh);
-  top: calc(50% - 5vh);
-  transform: rotate(326.25deg) translateY(-20vh);
-}
-.subtitle-15 {
-  position: absolute;
-  font-size: 1.8em;
-  left: calc(50% - 18.5vh);
-  top: calc(50% - 5vh);
-  transform: rotate(348.75deg) translateY(-20vh);
-}
-
+/* numbers are emboldened here for easy reference by the user */
 .number {
   font-weight: bold;
 }

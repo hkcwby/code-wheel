@@ -1,3 +1,4 @@
+import mainLogo from "../assets/Interplay_logo.png";
 function Wheel(props) {
   return (
     <div className="outer-wheel">
@@ -5,7 +6,7 @@ function Wheel(props) {
         {props.outer.map((item, index) => (
           <div
             key={index}
-            className={`pos-${index} outer`}
+            className={`pos-data-${index} data outer`}
             onClick={() => props.outerWheelClick(index)}
           >
             {item}
@@ -16,7 +17,7 @@ function Wheel(props) {
         {props.inner.map((item, index) => (
           <div
             key={index}
-            className={`pos-${index} inner`}
+            className={`pos-data-${index} data inner`}
             onClick={() => props.innerWheelClick(index)}
           >
             {item}
@@ -24,102 +25,127 @@ function Wheel(props) {
         ))}
         {props.layers.layerOne.map((item, index) =>
           Number(item) ? (
-            <div key={index} className={`pos-${index} layer-one number`}>
+            <div
+              key={index}
+              className={`pos-data-${index} data layer-one number`}
+            >
               {item}
             </div>
           ) : (
-            <div key={index} className={`pos-${index} layer-one`}>
+            <div key={index} className={`pos-data-${index} data layer-one`}>
               {item}
             </div>
           )
         )}
         {props.layers.layerTwo.map((item, index) =>
           Number(item) ? (
-            <div key={index} className={`pos-${index} layer-two number`}>
+            <div
+              key={index}
+              className={`pos-data-${index} data layer-two number`}
+            >
               {item}
             </div>
           ) : (
-            <div key={index} className={`pos-${index} layer-two`}>
+            <div key={index} className={`pos-data-${index} data layer-two`}>
               {item}
             </div>
           )
         )}
         {props.layers.layerThree.map((item, index) =>
           Number(item) ? (
-            <div key={index} className={`pos-${index} layer-three number`}>
+            <div
+              key={index}
+              className={`pos-data-${index} data layer-three number`}
+            >
               {item}
             </div>
           ) : (
-            <div key={index} className={`pos-${index} layer-three`}>
+            <div key={index} className={`pos-data-${index} data layer-three`}>
               {item}
             </div>
           )
         )}
         {props.layers.layerFour.map((item, index) =>
           Number(item) ? (
-            <div key={index} className={`pos-${index} layer-four number`}>
+            <div
+              key={index}
+              className={`pos-data-${index} data layer-four number`}
+            >
               {item}
             </div>
           ) : (
-            <div key={index} className={`pos-${index} layer-four`}>
+            <div key={index} className={`pos-data-${index} data layer-four`}>
               {item}
             </div>
           )
         )}
         {props.layers.layerFive.map((item, index) =>
           Number(item) ? (
-            <div key={index} className={`pos-${index} layer-five number`}>
+            <div
+              key={index}
+              className={`pos-data-${index} data layer-five number`}
+            >
               {item}
             </div>
           ) : (
-            <div key={index} className={`pos-${index} layer-five`}>
+            <div key={index} className={`pos-data-${index} data layer-five`}>
               {item}
             </div>
           )
         )}
         {props.layers.layerSix.map((item, index) =>
           Number(item) ? (
-            <div key={index} className={`pos-${index} layer-six number`}>
+            <div
+              key={index}
+              className={`pos-data-${index} data layer-six number`}
+            >
               {item}
             </div>
           ) : (
-            <div key={index} className={`pos-${index} layer-six`}>
+            <div key={index} className={`pos-data-${index} data layer-six`}>
               {item}
             </div>
           )
         )}
         {props.layers.layerSeven.map((item, index) =>
           Number(item) ? (
-            <div key={index} className={`pos-${index} layer-seven number`}>
+            <div
+              key={index}
+              className={`pos-data-${index} data layer-seven number`}
+            >
               {item}
             </div>
           ) : (
-            <div key={index} className={`pos-${index} layer-seven`}>
+            <div key={index} className={`pos-data-${index} data layer-seven`}>
               {item}
             </div>
           )
         )}
         {props.layers.layerEight.map((item, index) =>
           Number(item) ? (
-            <div key={index} className={`pos-${index} layer-eight number`}>
+            <div
+              key={index}
+              className={`pos-data-${index} data layer-eight number`}
+            >
               {item}
             </div>
           ) : (
-            <div key={index} className={`pos-${index} layer-eight`}>
+            <div key={index} className={`pos-data-${index} data layer-eight`}>
               {item}
             </div>
           )
         )}
         {props.layers.title.map((item, index) => (
-          <h2 key={index} className={"title-" + index}>
+          <h2 key={index} className={`title-${index} title-pos`}>
             {item}
           </h2>
         ))}
         {props.layers.subtitle.map((item, index) => (
-          <h3 key={index} className={"subtitle-" + index}>
+          <h3 key={index} className={`title-${index} subtitle-pos`}>
             {item}
           </h3>
         ))}
+        <img src={mainLogo} className="logo" alt="logo" />
         <div id="ring-wheel"></div>
       </div>
     </div>

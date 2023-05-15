@@ -1,3 +1,4 @@
+import mainLogo from "../assets/Interplay_logo.png";
 function Info() {
   return (
     <div className="outer-wheel info-tab">
@@ -66,6 +67,7 @@ function Info() {
           can play.
         </p>
       </div>
+      <img src={mainLogo} style={{ height: "10vh" }} alt="logo" />
     </div>
   );
 }

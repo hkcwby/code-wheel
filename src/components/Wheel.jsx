@@ -135,24 +135,31 @@ function Wheel(props) {
             </div>
           )
         )}
-        {props.layers.title.map((item, index) => (
-          <h2 key={index} className={`title-${index} title-pos`}>
-            {item}
-          </h2>
-        ))}
-        {props.layers.subtitle.map((item, index) => (
-          <h3 key={index} className={`title-${index} subtitle-pos`}>
-            {item}
-          </h3>
-        ))}
-        {props.layers.subtitle.map((item, index) =>
+        {props.layers.logoTitle.map((item, index) =>
+          item ? (
+            <h2 key={index} className={`title-${index} title-pos`}>
+              NEUROMANCER
+            </h2>
+          ) : (
+            <></>
+          )
+        )}
+        {props.layers.logoTitle.map((item, index) =>
+          item ? (
+            <h3 key={index} className={`title-${index} subtitle-pos`}>
+              PAX Verification Code Wheel
+            </h3>
+          ) : (
+            <></>
+          )
+        )}
+        {props.layers.logoTitle.map((item, index) =>
           item ? (
             <img src={mainLogo} className={`title-${index} logo`} alt="logo" />
           ) : (
             <></>
           )
         )}
-        {/* <img src={mainLogo} className="logo" alt="logo" /> */}
         <div id="ring-wheel"></div>
       </div>
     </div>

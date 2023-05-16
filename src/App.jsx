@@ -193,44 +193,8 @@ function App() {
     "",
     "",
   ];
-  //the position of the title and subtitles default positions
-  const titleWheel = [
-    "",
-    "",
-    "",
-    "NEUROMANCER",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-  ];
-  const subtitleWheel = [
-    "",
-    "",
-    "",
-    "PAX Verification Code Wheel",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-  ];
-  const logoWheel = [
+
+  const logoTitleWheel = [
     "",
     "",
     "",
@@ -261,9 +225,7 @@ function App() {
     layerSix: layerSixWheel,
     layerSeven: layerSevenWheel,
     layerEight: layerEightWheel,
-    title: titleWheel,
-    subtitle: subtitleWheel,
-    logo: logoWheel,
+    logoTitle: logoTitleWheel,
   });
 
   //a function to update the various data values that appear on the wheel
@@ -328,18 +290,9 @@ function App() {
     //set the new inner wheel positions for rendering
     setInner(innerNew.concat(...innerMod));
 
-    //update the title position and sub title positions in a similar way
-    const titleNew = [...layers.title];
-    const titleMod = titleNew.splice(0, position);
-    const dataTitle = titleNew.concat(titleMod);
-
-    const subtitleNew = [...layers.subtitle];
-    const subtitleMod = subtitleNew.splice(0, position);
-    const dataSubtitle = subtitleNew.concat(subtitleMod);
-
-    const logoNew = [...layers.logo];
-    const logoMod = logoNew.splice(0, position);
-    const dataLogo = logoNew.concat(logoMod);
+    const logoTitleNew = [...layers.logoTitle];
+    const logoTitleMod = logoTitleNew.splice(0, position);
+    const dataLogoTitle = logoTitleNew.concat(logoTitleMod);
 
     //now refresh each of the eight wheel data layers with the updated variable values
 
@@ -538,9 +491,7 @@ function App() {
       layerSix: dataSix,
       layerSeven: dataSeven,
       layerEight: dataEight,
-      title: dataTitle,
-      subtitle: dataSubtitle,
-      logo: dataLogo,
+      logoTitle: dataLogoTitle,
     });
   }
   //shifts the outer wheel

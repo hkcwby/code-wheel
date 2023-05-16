@@ -141,7 +141,7 @@ body {
   position: absolute;
   font-size: 1.4em;
   left: calc(50% - 14.5vh);
-  top: calc(50% - 4vh);
+  top: calc(50% - 5vh);
   transform: translateY(-25vh);
 }
 

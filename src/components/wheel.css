@@ -131,25 +131,26 @@ body {
 /* title, subtitle and logo are always the same distance from the center */
 .title-pos {
   position: absolute;
-  font-size: 2.5em;
-  left: calc(50% - 14.5vh);
+  font-size: 2em;
+  left: calc(50% - 12vh);
   top: calc(50% - 6vh);
-  transform: translateY(-24vh);
+  transform: translateY(-28vh);
 }
 
 .subtitle-pos {
   position: absolute;
-  font-size: 1.8em;
-  left: calc(50% - 18.5vh);
-  top: calc(50% - 5vh);
-  transform: translateY(-20vh);
+  font-size: 1.4em;
+  left: calc(50% - 14.5vh);
+  top: calc(50% - 4vh);
+  transform: translateY(-25vh);
 }
 
 .logo {
-  height: 10vh;
+  height: 8vh;
   position: absolute;
-  left: calc(50% - 12vh);
-  top: calc(50% - 3vh);
+  left: calc(50% - 9vh);
+  top: calc(50% - 5vh);
+  transform: translateY(-16vh);
 }
 
 /* the title, subtitle and logo are at an off angle between two points on the wheel */

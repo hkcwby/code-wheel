@@ -230,6 +230,24 @@ function App() {
     "",
     "",
   ];
+  const logoWheel = [
+    "",
+    "",
+    "",
+    true,
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+  ];
   //creating react state management for each of these data positions above
   const [outer, setOuter] = useState(outerWheel);
   const [inner, setInner] = useState(innerWheel);
@@ -245,6 +263,7 @@ function App() {
     layerEight: layerEightWheel,
     title: titleWheel,
     subtitle: subtitleWheel,
+    logo: logoWheel,
   });
 
   //a function to update the various data values that appear on the wheel
@@ -317,6 +336,10 @@ function App() {
     const subtitleNew = [...layers.subtitle];
     const subtitleMod = subtitleNew.splice(0, position);
     const dataSubtitle = subtitleNew.concat(subtitleMod);
+
+    const logoNew = [...layers.logo];
+    const logoMod = logoNew.splice(0, position);
+    const dataLogo = logoNew.concat(logoMod);
 
     //now refresh each of the eight wheel data layers with the updated variable values
 
@@ -517,6 +540,7 @@ function App() {
       layerEight: dataEight,
       title: dataTitle,
       subtitle: dataSubtitle,
+      logo: dataLogo,
     });
   }
   //shifts the outer wheel

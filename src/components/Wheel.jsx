@@ -145,7 +145,14 @@ function Wheel(props) {
             {item}
           </h3>
         ))}
-        <img src={mainLogo} className="logo" alt="logo" />
+        {props.layers.subtitle.map((item, index) =>
+          item ? (
+            <img src={mainLogo} className={`title-${index} logo`} alt="logo" />
+          ) : (
+            <></>
+          )
+        )}
+        {/* <img src={mainLogo} className="logo" alt="logo" /> */}
         <div id="ring-wheel"></div>
       </div>
     </div>
